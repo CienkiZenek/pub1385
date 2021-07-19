@@ -1,0 +1,120 @@
+body
+{
+    font-family: 'LatoWeb', sans-serif;
+}
+
+.js-cookie-consent{
+    position: page;
+    top: 0;
+    z-index: 9999;
+}
+.js-cookie-consent-agree{
+
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.wys40{
+    min-height: 40px;
+}
+.wys20{
+    min-height: 20px;
+}
+.wys15{
+    min-height: 15px;
+}
+
+.wys10{
+    min-height: 10px;
+}
+.wys5{
+    min-height: 5px;
+}
+
+.size20 {
+    font-size: 20px;
+}
+
+.size30 {
+    font-size: 30px;
+}
+.size50 {
+    font-size: 50px;
+}
+
+.tlo-szare1{
+    background: #d1d1d1;
+}
+.tlo-szare2{
+    background: #F3F3F3;
+}
+
+.tlo-szare3{
+    background: #E4E4E4;
+}
+
+.tlo-szare4{
+    background: #D5D5D5;
+}
+.tlo-szare4{
+    background: #C7C7C7;
+}
+
+.nieWidzialne{
+    visibility: hidden;
+}
+
+.nieaktywna{
+    color: #ff0000;
+}
+
+.tlo-nav {
+
+    background:#0d6efd96;
+}
+.kolorBialy{
+    color: #fff;
+}
+
+
+
+
+/* komunikat o kopiowaniu*/
+
+#komunikatKopiowanie {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    top: 20px; /* Place the button at the bottom of the page */
+    right: 50px; /* Place the button 30px from the right */
+    z-index: 95; /* Make sure it does not overlap */
+    background-color: #ffb46e; /* Set a background color */
+    color: white; /* Text color */
+    padding: 8px;
+    /*border: 1px solid ;*/
+    border-radius: 10px;
+}
+
+
+/* toTop https://www.w3schools.com/howto/howto_js_scroll_to_top.asp  */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 60px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #6dc2ff; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+/* end  toTop  */
