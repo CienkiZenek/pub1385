@@ -1,6 +1,9 @@
 /node_modules
 /public/hot
 /public/storage
+/public/memy
+/public/obrazki
+/public/pliki_bibliograf
 /storage/*.key
 /storage/*.index
 /vendor

@@ -4,6 +4,7 @@
 
     <div class="row">
         <div class="col-md-6 ">
+            @if(isset($tematy) && $tematy->count()>0)
             <div class="card">
                 <div class="card-header">
                     <a href="{{route('tematy')}}" class="link-secondary">Tematy</a>
@@ -23,10 +24,14 @@
                         </a>--}}
 
                 </div>
+
             </div>
+            @endif
+
 
         </div>
         <div class="col-md-6">
+            @if(isset($znalezione) && $znalezione->count()>0)
             <div class="card " >
                 <div class="card-header">
                     <a href="{{route('znalezione')}}" class="link-secondary">Znalezione w sieci</a>
@@ -49,6 +54,7 @@
 
                 </div>
             </div>
+            @endif
             </div>
 
         </div>
@@ -58,6 +64,7 @@
     <div class="row mt-3">
 
         <div class="col-md-6">
+
             <div class="card ">
                 <div class="card-header">
                     <a href="{{route('miejsca')}}" class="link-secondary">Miejsca dyskusji</a>
@@ -188,7 +195,7 @@
         @endif
     @endauth
 
-    @if(isset($tagi))
+    @if(isset($tagi) && $tagi->count()>0)
 <div class="row mt-3 mb-3 ">
     <div class="col-8 offset-2">
 
@@ -212,7 +219,7 @@
 </div>
 @endif
 
-    <div class="row mt-4">
+    {{--<div class="row mt-4">
         <div class="col-12 mb-3">
             <button type="button" class="btn btn-success" onclick="location.href='{{ route('wsparcie') }}'">
                 Wesprzyj serwis! <span class="badge bg-danger">zrzutka 1</span>
@@ -228,6 +235,6 @@
                 Wesprzyj serwis! <span class="badge bg-danger">zrzutka 3</span>
             </button>
         </div>
-    </div>
+    </div>--}}
     
 @endsection

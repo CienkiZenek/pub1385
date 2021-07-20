@@ -117,7 +117,7 @@
     {{-- Komunikaty - Koniec --}}
 
     <div class="mb-5"></div>
-   {{-- @yield('tresc')--}}
+    @yield('tresc')
 
 
     <div class="mt-5 mb-5"></div>
@@ -133,8 +133,8 @@
     <div class="col-12 text-center" style="color: white">&reg; PomocnikDyskutanta 2021 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
         <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
-    </div>
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.10</div>@endauth
+    </div><div class="fs-6 kolorBialy">Wersja: 0.101</div>
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.101</div>@endauth
 </footer>
 
 
