@@ -29,6 +29,7 @@ class Memy extends Model
 
     public function getUrlmemAttribute(){
         return Storage::url($this->mem);}
+
     public function setTytulAttribute($value){
         $this->attributes['tytul']=$value;
         $this->attributes['slug']=Str::slug($value, '_');

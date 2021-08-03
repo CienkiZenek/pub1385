@@ -46,6 +46,8 @@ Route::get('/szukaj', '_GlownyController@start');
 // podstrony
 // kontakt -- list do redakcji
 Route::post('/listDoRedakcji', '_PomocniczyController@listDoRedakcji')->name('listDoRedakcji');
+Route::post('/listDoRedakcjiUser', '_PomocniczyController@listDoRedakcjiUser')->name('listDoRedakcjiUser');
+
 
 // koniec podstrony
 

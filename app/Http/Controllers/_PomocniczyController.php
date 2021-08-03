@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
+use App\Listy;
+use Illuminate\Support\Facades\Auth;
 
 class _PomocniczyController extends Controller
 {
@@ -23,8 +25,14 @@ class _PomocniczyController extends Controller
         ])->validate();
         return $walidated;
     }
+    protected function validatorBezCaptha($data){
+        $walidated= Validator::make($data, [
+            'tresc'=>'required|min:10'
+        ])->validate();
+        return $walidated;
+    }
 
-
+/* List do redakcji użytkowników niezalogownych i bez potwierdzonego e-mailu*/
     public function listDoRedakcji(Request $request){
         $data = $this->validator($request->all());
         /*dd($data);*/
@@ -34,5 +42,30 @@ $wiadomosc=$data['tresc'];
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
     }
 
+
+    /* List do redakcji użytkowników Zalogownych i Z potwierdzonym e-mailem*/
+    public function listDoRedakcjiUser(Request $request){
+        $data = $this->validatorBezCaptha($request->all());
+        /*dd($data);*/
+        $wiadomosc=$data['tresc'];
+
+        /* zapisywanie treści listu  w bazie */
+
+        /* Odbiorca o id 1 to redakcj!!*/
+
+        $list['tresc']=$wiadomosc;
+        $list['naglowek']='';
+        $list['tytul']='';
+        $list['autor_id']=Auth::user()->id;
+        $list['odbiorca_id']=1;
+        $list['status']='wyslane';
+        $list['rodzajOdbiorcy']='redakcja';
+        Listy::create($list);
+
+        /* Wysyłanie listu*/
+        mail(env('MAIL_REDAKCJA' ), 'Wiadomość z PoradnikDyskutanta.pl', $wiadomosc);
+        // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
+        return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
+    }
 
 }

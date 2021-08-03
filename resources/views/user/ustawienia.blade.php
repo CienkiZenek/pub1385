@@ -19,24 +19,36 @@
             </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
+                    <a href="{{route('propozycje')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
+                        <i class="bi bi-file-earmark-text"></i> Propozycje tematów</a>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
                     <a href="{{route('nowyTemat')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
                         <i class="bi bi-file-earmark-text"></i> Zaproponuj nowy temat</a>
                 </div>
 
+
+            @if(\App\Propozycje::Where('dodal_user', Auth::user()->id)->count()>0)
                 <div class="col-sm-12 col-md-6 col-lg-4 mt-3">
                     <a href="{{route('listaMoichTematow')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
                         <i class="bi bi-list"></i> Moje propozycje tematów</a>
                 </div>
+@endif
 
+                @if(\App\Zagadnienia_uwagi::Where('dodal_user', \auth()->user()->id)->get()->count()>0 || \App\Propozycje_uwagi::Where('dodal_user', \auth()->user()->id)->get()->count()>0)
                 <div class="col-sm-12 col-md-6 col-lg-4  mt-3">
                     <a href="{{route('mojeUwagi')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
                         <i class="bi bi-list-nested"></i> Moje uwagi</a>
                 </div>
+                @endif
 
+                    @if(\App\Services\PropozycjeUwagiService::propozycjeUwagi()->count()>0)
                 <div class="col-sm-12 col-md-6 col-lg-4  mt-3">
                     <a href="{{route('uwagiPropozycje')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
                         <i class="bi bi-list-check"></i> Uwagi innych do moich propozycji</a>
                 </div>
+                @endif
 
                 <div class="col-sm-12 col-md-6 col-lg-4  mt-3">
                     <a href="{{route('znalezioneLista')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">

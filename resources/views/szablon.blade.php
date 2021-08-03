@@ -5,6 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{--Open Graph dane dla facebooka i Twittera przy udostepnianiu--}}
+
+    <meta property="og:url"           content="@yield('og_url', '')" />
+    <meta property="og:type"           content="@yield('og_type', 'website')" />
+    <meta property="og:title"         content="@yield('og_title', 'Poradnik Dyskutanta')" />
+    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji. ')" />
+    <meta property="og:image"         content="@yield('og_image', '')" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {{--Koniec Open Graph --}}
+
     <title>@yield('title', 'Poradnik dyskutanta')</title>
     <link rel="stylesheet" href="{{ URL::asset('/css/bootstrap-css/bootstrap-reboot.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('/css/bootstrap-css/bootstrap.min.css')}}">
@@ -20,6 +31,7 @@
     @livewireStyles
 </head>
 <body class="d-flex flex-column min-vh-100">
+
 @include('cookieConsent::index')
 <nav class="navbar navbar-expand-lg navbar-light tlo-nav" >
     <div class="container-fluid">
@@ -133,8 +145,10 @@
     <div class="col-12 text-center" style="color: white">&reg; PomocnikDyskutanta 2021 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
         <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
-    </div><div class="fs-6 kolorBialy">Wersja: 0.101</div>
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.101</div>@endauth
+    </div>
+
+
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.102</div>@endauth
 </footer>
 
 

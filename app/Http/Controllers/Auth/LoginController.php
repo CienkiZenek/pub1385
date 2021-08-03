@@ -48,7 +48,7 @@ class LoginController extends Controller
     }
 
 
-    /*public function verify(Request $request){
+    public function verify(Request $request){
         $credential = [
             'email' => $request->email,
             'password' => $request->password,
@@ -63,9 +63,9 @@ class LoginController extends Controller
 
             return redirect(route('stronaGlowne'));
         }
-    }*/
+    }
 
-    /*public function login(Request $request)
+    public function login(Request $request)
     {
         $this->validateLogin($request);
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
@@ -82,7 +82,7 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
-    }*/
+    }
 
 
     protected function authenticated(Request $request, $user)

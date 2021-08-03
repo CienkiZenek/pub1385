@@ -6,6 +6,7 @@ use App\Zagadnienia_uwagi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use App\Services\PropozycjeUwagiService;
 use App\Propozycje;
 use App\Propozycje_uwagi;
 use App\Znalezione;
@@ -170,20 +171,24 @@ class UserDzialaniaController extends Controller
 
         /* 1 wyszukiwanie listy moich propzycji*/
 
-       $propozycjeUsera=Propozycje::Where('dodal_user', \auth()->user()->id)->get();
+      // $propozycjeUsera=Propozycje::Where('dodal_user', \auth()->user()->id)->get();
        /* 2 dla każdej z propozycji wyszukujemy powiązanych z nią uwag
        i łaczymy je razem
        */
-        $Wyniki=collect();
+        /*$Wyniki=collect();
         for($i = 0;$i<$propozycjeUsera->count();$i++)
         {
            $tmp=$propozycjeUsera->slice($i,1)->first()->uwagi;
             $Wyniki=$Wyniki->concat($tmp);
-        }
+        }*/
+
+        // <- przeniesioen do Serwisu!!!!!!!!!!
      //$Wyniki=auth()->user()->propozycjeUwagi()->paginate(9);
 
        // $Wyniki=$this->paginate($Wyniki);
        // $Wyniki=$Wyniki->forPage(2, 9);
+
+        $Wyniki=PropozycjeUwagiService::propozycjeUwagi();
         return view('tresc.userzyAktywnosc.uwagi-do-moich-lista', compact('Wyniki'));
 
     }

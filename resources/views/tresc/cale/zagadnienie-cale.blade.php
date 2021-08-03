@@ -1,6 +1,35 @@
 @extends('szablon')
-@section('title', 'Zagadnienie: ')
+@section('title', 'Zagadnienie: '.$zagadnienie->zagadnienie)
 @section('tresc')
+
+    {{-- dane Open Graph dla facebooka--}}
+@section('og_url', Request::url())
+@section('og_type', 'article')
+@section('og_title', 'Poradnik dyskutant - '.$zagadnienie->zagadnienie)
+@section('og_description', $zagadnienie->zajawka)
+
+@if(Str::length($zagadnienie->obrazek1)>5)
+@section('og_image', $zagadnienie->urlobrazek1)
+@endif
+
+{{-- facebook SDK --}}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v11.0"
+        nonce="djYMT9ht"></script>
+{{-- Koniec facebook SDK --}}
+{{-- Twitter js --}}
+<script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+
 
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -17,12 +46,47 @@
 </div>
     <div class="row">
         <div class="mb-2 col-md-8 col-sm-12" >
-           <div id="tresc"> {{$zagadnienie->tresc}}
+           <div id="tresc"> {{$zagadnienie->tresc}} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
 
            </div>
+
+            <div class="d-flex mt-2 mb-5">
+                {{-- Twitter share button--}}
+                <a class="twitter-share-button"
+                   href="https://twitter.com/intent/tweet"
+                   data-size="large"
+                   data-lang="pl"
+                   data-text="{{$zagadnienie->tresc}}"
+                   data-url="{{Request::url()}}"
+                >
+                    Tweet
+                </a>
+            {{-- Facebook share button--}}
+            <div class="fb-share-button ms-2"
+                 data-href="{{Request::url()}}"
+                 data-layout="button"
+                 size="large">
+            </div>
+
+                {{-- Facebook like button--}}
+            <div class="fb-like ms-2" data-href="{{Request::url()}}"
+                 data-width="" data-layout="standard" data-action="like"
+                 data-size="large" data-share="false"></div>
+
+            </div>
+
+
+
+
+
+<div>
+
             <i class="bi bi-clipboard fs-3" onClick="kopiujCalaTresc()" id="wszystko" title="Skopiuj całą treść zagadnienia do schowka"></i>
             <div id="komunikatKopiowanie"></div>
+</div>
+
+
             @if(Str::length($zagadnienie->linkSlownikPdf)>2)
                 <div class="mt-3"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
             @endif

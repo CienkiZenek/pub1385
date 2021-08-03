@@ -1,5 +1,7 @@
+// console.log("Tag usunięty!");
 // Kopiowanie całości lub fragmentów zagadnień/haseł
 var komunikat  = document.getElementById("komunikatKopiowanie");
+
 
 function kopiujCalaTresc() {
 
@@ -14,9 +16,9 @@ function kopiujCalaTresc() {
     range.selectNodeContents(tresc);
 
     /* działa tylko w firexie*/
-    let rangeLink = new Range();
+    /*let rangeLink = new Range();
     rangeLink.setStart(dodaj.firstChild, 0);
-    rangeLink.setEnd(dodaj.firstChild, dodaj.firstChild.length);
+    rangeLink.setEnd(dodaj.firstChild, dodaj.firstChild.length);*/
     document.getSelection().removeAllRanges();
 
     document.getSelection().addRange(range);
@@ -40,9 +42,14 @@ function kopiujCalaTresc() {
 
 document.onselectionchange = function() {
     let selection = document.getSelection();
+    var dodaj = document.getElementById("dodaj");
     dlugosc =  document.getSelection().toString().length
     if(dlugosc>10){
         komunikat.style.display = "block";
+        let rangeLink = new Range();
+        rangeLink.selectNodeContents(dodaj);
+       // document.getSelection().removeAllRanges();
+        //document.getSelection().addRange(rangeLink);
         // kopiowanie zaznaczonego
         try {
             var ok = document.execCommand('copy');
@@ -52,8 +59,9 @@ document.onselectionchange = function() {
             komunikat.innerHTML = 'Twoja przeglądarka nie obsługuje funkcji kopiowania!';
         }
     }
+   //var cb = navigator.clipboard;
+    //cb.writeText("AAAAAAAAAAAAAAAAAAA");
 
-    // czyszczenie komunikatu
     setTimeout(wyczyscKomunikat, 10000);
 };
 

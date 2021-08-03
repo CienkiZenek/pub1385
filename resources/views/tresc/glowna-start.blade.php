@@ -167,15 +167,9 @@
                                         <p class=""><a href="{{ route('edycjaPropozycji', $propozycja->id) }}" class="link-dark text-decoration-none">{{ Str::limit($propozycja->tytul, 40) }}</a>
                                         </p>
                                     @endforeach
-
                                 </div>
                             </div>
-
-
                         </div>
-
-
-
                 <div class="col-md-6">
                     <div class="card ">
                         <div class="card-header">
@@ -189,13 +183,11 @@
                         </div>
                     </div>
                 </div>
-
-
     </div>
         @endif
     @endauth
 
-    @if(isset($tagi) && $tagi->count()>0)
+    @if(isset($tagi) && count($tagi)>0)
 <div class="row mt-3 mb-3 ">
     <div class="col-8 offset-2">
 
