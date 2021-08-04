@@ -330,7 +330,7 @@
       <path value="$PROJECT_DIR$/vendor/league/config" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="6" />
     <option name="y" value="13" />
     <option name="width" value="1889" />
