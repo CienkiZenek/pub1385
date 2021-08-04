@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class _PomocniczyController extends Controller
 {
 
+    public $headers = "Content-Type: text/html; charset=UTF-8";
+
    /* protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -37,8 +39,8 @@ class _PomocniczyController extends Controller
         $data = $this->validator($request->all());
         /*dd($data);*/
 $wiadomosc=$data['tresc'];
-       mail(env('MAIL_REDAKCJA' ), 'Wiadomość z PoradnikDyskutanta.pl', $wiadomosc);
-      // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
+       mail(env('MAIL_REDAKCJA' ), 'List z PoradnikDyskutanta.pl', $wiadomosc, $this->headers);
+
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
     }
 
@@ -50,7 +52,6 @@ $wiadomosc=$data['tresc'];
         $wiadomosc=$data['tresc'];
 
         /* zapisywanie treści listu  w bazie */
-
         /* Odbiorca o id 1 to redakcj!!*/
 
         $list['tresc']=$wiadomosc;
@@ -63,7 +64,22 @@ $wiadomosc=$data['tresc'];
         Listy::create($list);
 
         /* Wysyłanie listu*/
-        mail(env('MAIL_REDAKCJA' ), 'Wiadomość z PoradnikDyskutanta.pl', $wiadomosc);
+
+       // $headers = "MIME-Version: 1.0" . "\r\n";
+       // $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+// More headers
+        //$headers .= 'From: <webmaster@example.com>' . "\r\n";
+
+        // create header
+        $header  = 'MIME-Version: 1.0' . "\r\n";
+        $header .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+       // $header .= 'To: ' . $r. "\r\n";
+       // $header .= 'From: ' . $s. "\r\n";
+       // $headers = "Content-Type: text/html; charset=UTF-8";
+        $wiadomosc.="\r\n".Auth::user()->name;
+        $wiadomosc.="\r\n".Auth::user()->email;
+        dd($wiadomosc);
+            mail(env('MAIL_REDAKCJA'), 'List z PoradnikDyskutanta.pl', $wiadomosc, $this->headers);
         // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
     }

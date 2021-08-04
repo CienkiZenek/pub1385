@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ca80ec6-f1d9-41cf-838d-39be79ee9d0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Listy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/PropozycjeUwagiService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/obrazekKopiowanie_old.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pomocnik.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pomocnik.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserDzialaniaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserDzialaniaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Memy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Memy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/kopiowanie.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/kopiowanie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/obrazekKopiowanie.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/obrazekKopiowanie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/szablon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/szablon.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tresc/glowna-start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/glowna-start.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tresc/podstrony/kontakt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/podstrony/kontakt.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/ustawienia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/ustawienia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/info.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/info.index-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/memy.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/memy.index-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/miejsca.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/miejsca.index-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/propozycje.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/propozycje.index-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/propozycje_uwagi.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/propozycje_uwagi.index-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/przekazdnia.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/przekazdnia.index-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/zagadnienia_uwagi.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/zagadnienia_uwagi.index-shm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,14 +30,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="1350">
+              <caret line="47" column="68" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="68" />
               <folding>
                 <element signature="e#7#44#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -82,8 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>noweZnalezione</find>
-      <find>validator</find>
       <find>bi-bucket-fill</find>
       <find>bi-chat-quote-fill</find>
       <find>bi-chat-left-quote-fill</find>
@@ -105,13 +95,15 @@
       <find>uwagiPropozycje</find>
       <find>prop</find>
       <find>wyslijuser</find>
-      <find>listDoRedakcji</find>
       <find>dodaj</find>
       <find>kopiuj</find>
       <find>mem</find>
       <find>memy</find>
       <find>copyTextBtn</find>
       <find>SCOUT_ELASTIC_HOST</find>
+      <find>list</find>
+      <find>listDoRedakcji</find>
+      <find>listdo</find>
     </findStrings>
     <replaceStrings>
       <replace>$komunikat</replace>
@@ -166,7 +158,6 @@
         <option value="$PROJECT_DIR$/resources/views/user/ustawienia.blade.php" />
         <option value="$PROJECT_DIR$/app/Listy.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ListyController.php" />
         <option value="$PROJECT_DIR$/resources/views/szablon.blade.php" />
         <option value="$PROJECT_DIR$/public/js/kopiowanie.js" />
@@ -174,11 +165,12 @@
         <option value="$PROJECT_DIR$/public/index.js" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/app/Memy.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php" />
         <option value="$PROJECT_DIR$/public/js/obrazekKopiowanie.js" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/tresc/podstrony/kontakt.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" />
       </list>
     </option>
   </component>
@@ -307,7 +299,7 @@
       <path value="$PROJECT_DIR$/vendor/league/config" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="6" />
     <option name="y" value="13" />
     <option name="width" value="1889" />
@@ -333,6 +325,19 @@
               <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
               <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,12 +483,13 @@
       <workItem from="1627539195113" duration="8935000" />
       <workItem from="1627625800133" duration="8575000" />
       <workItem from="1627884873819" duration="7971000" />
-      <workItem from="1627971448562" duration="4310000" />
+      <workItem from="1627971448562" duration="7174000" />
+      <workItem from="1628058157179" duration="2215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="558341000" />
+    <option name="totallyTimeSpent" value="563420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,7 +504,7 @@
     <frame x="6" y="13" width="1889" height="1007" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1585566" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16019683" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -739,24 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Listy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="11" column="108" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/szablon.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -874,19 +866,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/app/Listy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="180">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="1350">
+          <caret line="47" column="68" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="68" />
           <folding>
             <element signature="e#7#44#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
