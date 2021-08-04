@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 class _PomocniczyController extends Controller
 {
 
-    public $headers = "Content-Type: text/html; charset=UTF-8";
+    public $headers = "MIME-Version: 1.0"."\r\n"."Content-Type: text/html; charset=UTF-8". "\r\n". "From: <info@example.com>";
+
 
    /* protected function validator(array $data)
     {
@@ -76,9 +77,9 @@ $wiadomosc=$data['tresc'];
        // $header .= 'To: ' . $r. "\r\n";
        // $header .= 'From: ' . $s. "\r\n";
        // $headers = "Content-Type: text/html; charset=UTF-8";
-        $wiadomosc.="\r\n".Auth::user()->name;
+        $wiadomosc.= Auth::user()->name;
         $wiadomosc.="\r\n".Auth::user()->email;
-        //dd($wiadomosc);
+       // dd($wiadomosc);
             mail(env('MAIL_REDAKCJA'), 'List z PoradnikDyskutanta.pl', $wiadomosc, $this->headers);
         // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
