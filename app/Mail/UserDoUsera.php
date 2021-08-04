@@ -33,6 +33,8 @@ class UserDoUsera extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.listDoUsera');
+        return $this
+            ->subject('List od użytkownika PoradnikDyskutanta.pl')
+        ->markdown('emails.listDoUsera');
     }
 }

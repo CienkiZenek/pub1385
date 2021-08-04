@@ -10,6 +10,7 @@ use App\Propozycje_uwagi;
 use App\Zagadnienia_uwagi;
 use App\Mail\UserDoUsera;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
 
 use PhpParser\Lexer\TokenEmulator\FlexibleDocStringEmulator;
 

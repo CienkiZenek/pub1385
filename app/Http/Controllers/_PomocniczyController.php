@@ -12,7 +12,7 @@ use Illuminate\Support\HtmlString;
 class _PomocniczyController extends Controller
 {
 
-    public $headers = "MIME-Version: 1.0"."\r\n"."Content-Type: text/html; charset=UTF-8". "\r\n". "From: <PoradnikDyskutanta.pl>";
+    public $headers = "MIME-Version: 1.0"."\r\n"."Content-Type: text/html; charset=UTF-8". "\r\n". "From: PoradnikDyskutanta.pl";
 
 
    /* protected function validator(array $data)
