@@ -78,7 +78,7 @@ $wiadomosc=$data['tresc'];
        // $headers = "Content-Type: text/html; charset=UTF-8";
         $wiadomosc.="\r\n".Auth::user()->name;
         $wiadomosc.="\r\n".Auth::user()->email;
-        dd($wiadomosc);
+        //dd($wiadomosc);
             mail(env('MAIL_REDAKCJA'), 'List z PoradnikDyskutanta.pl', $wiadomosc, $this->headers);
         // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
