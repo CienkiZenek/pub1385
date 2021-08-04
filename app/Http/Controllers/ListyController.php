@@ -47,14 +47,8 @@ class ListyController extends Controller
 
       }
 
-      /* Dodanie funcjonalności - link w treści listu informujacy o tym której uwagi (do propozycji lub tematu) się list odnosi */
+      /* TODO Dodanie funcjonalności - link w treści listu informujacy o tym której uwagi (do propozycji lub tematu) się list odnosi */
 
-    public function listZagadnieniaUwagi(){
-        /*TODO */
-    }
 
-    public function listPropozycjeUwagi(){
-        /*TODO */
-    }
 
 }

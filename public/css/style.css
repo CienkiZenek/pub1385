@@ -71,7 +71,11 @@ body
 
 .tlo-nav {
 
-    background:#0d6efd96;
+    /*background:#0d6efd96;*/
+    background-image: url("tloStopka.png");
+    height: 90px;
+    background-position: center;
+    background-size: cover;
 }
 .kolorBialy{
     color: #fff;

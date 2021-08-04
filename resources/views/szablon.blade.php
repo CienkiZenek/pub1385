@@ -36,7 +36,7 @@
 <nav class="navbar navbar-expand-lg navbar-light tlo-nav" >
     <div class="container-fluid">
         <a class="navbar-brand fs-3" href="/" style="color:#dc3545">
-            <img src="{{ URL::asset('/img/logoPoradnik.png')}}" width="430" height="75" title="PoradnikDyskutanta.pl wersja Alfa" alt="PoradnikDyskutanta.pl wersja Alfa">
+            <img src="{{ URL::asset('/img/logoPoradnik.png')}}" width="226" height="80" title="PoradnikDyskutanta.pl wersja Alfa" alt="PoradnikDyskutanta.pl wersja Alfa">
 
 
         </a>
@@ -140,7 +140,7 @@
 </div>
 {{--Koniec zawartości głownej--}}
 
-<footer class="tlo-nav mt-auto py-2 ">
+<footer class="tlo-nav mt-auto py-2 tlo-nav">
 
     <div class="col-12 text-center" style="color: white">&reg; PomocnikDyskutanta 2021 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>

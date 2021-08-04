@@ -224,6 +224,9 @@ class UserDzialaniaController extends Controller
 
     }
 
+/* TODO dorobić dodawanie uwag do zagadnienia i propozycji tematu*/
+
+
 
 /* znalezione w sieci - lista i dodawanie*/
 
