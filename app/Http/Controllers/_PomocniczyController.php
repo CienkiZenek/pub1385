@@ -7,11 +7,12 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Validator;
 use App\Listy;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\HtmlString;
 
 class _PomocniczyController extends Controller
 {
 
-    public $headers = "MIME-Version: 1.0"."\r\n"."Content-Type: text/html; charset=UTF-8". "\r\n". "From: <info@example.com>";
+    public $headers = "MIME-Version: 1.0"."\r\n"."Content-Type: text/html; charset=UTF-8". "\r\n". "From: <PoradnikDyskutanta.pl>";
 
 
    /* protected function validator(array $data)
@@ -77,9 +78,11 @@ $wiadomosc=$data['tresc'];
        // $header .= 'To: ' . $r. "\r\n";
        // $header .= 'From: ' . $s. "\r\n";
        // $headers = "Content-Type: text/html; charset=UTF-8";
-        $wiadomosc.= Auth::user()->name;
+
+        $wiadomosc.="\r\n\r\n".Auth::user()->name;
         $wiadomosc.="\r\n".Auth::user()->email;
-       // dd($wiadomosc);
+
+       //dd($wiadomosc);
             mail(env('MAIL_REDAKCJA'), 'List z PoradnikDyskutanta.pl', $wiadomosc, $this->headers);
         // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
