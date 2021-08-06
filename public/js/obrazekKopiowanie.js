@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             //const response = await fetch(src)
             console.log("W addEven...");
             console.log(src);
-            const response = await fetch('https://poradnikdyskutanta.pl/memy/koty2.png')
+            const response = await fetch('https://poradnikdyskutanta.pl/memy/Screenshot_1522845962.png')
            // console.log(img.src);
             const blob = await response.blob()
             await setToClipboard(blob)
