@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
    // const img = document.querySelector('img')
     const img = document.getElementById('memObrazek')
    // const copyImgBtn = document.getElementById('copy-img-btn')
-
+    console.log(img.src);
     //console.log(kopiujObrazek);
     async function askWritePermission() {
 
