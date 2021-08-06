@@ -29,6 +29,7 @@ Route::get('/przekazdnia', 'PrzekazdniaController@index')->name('przekazdnia');
 
 Route::get('/haslo/{slug}', 'HaslaController@hasloCale')->name('hasloCale');
 Route::get('/zagadnienie/{slug}', 'ZagadnieniaController@zagadnienieCale')->name('zagadnienieCale');
+Route::get('/zagadnienieRozszerzenie/{slug}', 'ZagadnieniaController@zagadnienieRozszerzenie')->name('zagadnienieRozszerzenie');
 Route::get('/info/{id}', 'InfoController@infoCale')->name('infoCale')->middleware('UserAktywny');
 Route::get('/komunikat/{id}', 'KomunikatyController@komunikatCale')->name('komunikatCale');
 Route::get('/przekaz/{id}', 'PrzekazdniaController@przekazCale')->name('przekazCale');
@@ -56,6 +57,11 @@ Route::post('/listDoRedakcjiUser', '_PomocniczyController@listDoRedakcjiUser')->
 //Formularz do proponowania tematów prze użytkownika
 Route::get('/nowyTemat', 'UserDzialaniaController@nowyTemat')->name('nowyTemat')->middleware('UserAktywny');
 Route::post('/nowyTematZapisz', 'UserDzialaniaController@create')->name('nowyTematZapisz')->middleware('UserAktywny');
+
+//Formularz do dodawania uwag do propozycji tematów
+Route::get('/nowaUwagaPropozycja/{id}', 'UserDzialaniaController@nowaUwagaPropozycja')->name('nowaUwagaPropozycja')->middleware('UserAktywny');
+Route::post('/nowaUwagaPropozycjaZapisz', 'UserDzialaniaController@nowaUwagaPropozycjaZapisz')->name('nowaUwagaPropozycjaZapisz')->middleware('UserAktywny');
+
 
 Route::get('/edycjaPropozycji/{id}', 'UserDzialaniaController@edycjaPropozycji')->name('edycjaPropozycji')->middleware('UserAktywny');
 Route::post('/updatePropozycji/{id}', 'UserDzialaniaController@updatePropozycji')->name('updatePropozycji')->middleware('UserAktywny');

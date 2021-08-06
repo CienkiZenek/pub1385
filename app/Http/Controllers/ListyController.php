@@ -16,11 +16,11 @@ use PhpParser\Lexer\TokenEmulator\FlexibleDocStringEmulator;
 
 class ListyController extends Controller
 {
-   public function wyslijUserForm($userAdresatId){
+   public function wyslijUserForm($id){
        $wysylajacy = Auth::user();
-      $odbiorca = User::findOrFail($userAdresatId);
+      $odbiorca = User::findOrFail($id);
        return view('wiadomosciForm.formListUser', ['wysylajacy'=>$wysylajacy,
-           'odbiorca'=>$odbiorca]);
+           'odbiorca'=>$odbiorca], );
    }
 
 

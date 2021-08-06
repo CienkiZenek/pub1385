@@ -5,6 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G7JJM3GW8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4G7JJM3GW8');
+    </script>
+
     {{--Open Graph dane dla facebooka i Twittera przy udostepnianiu--}}
 
     <meta property="og:url"           content="@yield('og_url', '')" />
@@ -132,6 +142,23 @@
     @yield('tresc')
 
 
+
+    <div>
+        {{--reklama googla--}}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561469657068826"
+                crossorigin="anonymous"></script>
+        <!-- DomyslnaPoradnik -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3561469657068826"
+             data-ad-slot="1539392620"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        {{--koniec reklamy googla--}}
+    </div>
     <div class="mt-5 mb-5"></div>
 
 
@@ -142,13 +169,13 @@
 
 <footer class="tlo-nav mt-auto py-2 tlo-nav">
 
-    <div class="col-12 text-center" style="color: white">&reg; PomocnikDyskutanta 2021 </div>
+    <div class="col-12 text-center" style="color: white">&reg; PoradnikDyskutanta 2021 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
         <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
     </div>
 
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.102</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.103</div>@endauth
 </footer>
 
 
@@ -165,6 +192,7 @@
     </script>
 @endauth
 @livewireScripts
+
 </body>
 <script src="{{ URL::asset('/js/jquery-3.5.1.min.js')}}"></script>
 {{--

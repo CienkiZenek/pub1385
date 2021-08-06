@@ -26,4 +26,16 @@ class ZagadnieniaController extends Controller
 
         }
 
+
+    public function zagadnienieRozszerzenie($slug){
+
+        $zagadnienie=Zagadnienia::whereSlug($slug)->firstOrFail();
+        $haslo = Hasla::findOrFail($zagadnienie->haslo_id);
+        $dzial = Dzialy::findOrFail($haslo->dzial_id);
+        $kategoria = Kategorie::findOrFail($haslo->kategoria_id);
+        return view('tresc.cale.zagadnienie-caleRozszerzenie', ['zagadnienie'=>$zagadnienie, 'haslo'=>$haslo, 'dzial'=>$dzial, 'kategoria'=>$kategoria]);
+
+    }
+
+
 }

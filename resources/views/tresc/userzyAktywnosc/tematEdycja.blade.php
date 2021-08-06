@@ -50,7 +50,7 @@
 
 
         <div class="col-12 mt-3">
-            {{$propozycja->naglowek}}
+            {{$propozycja->tytul}}
         </div>
         <div class="col-12 mt-3">
             {{$propozycja->tresc}}
@@ -58,6 +58,16 @@
 
     </div>
     @endif
+
+    {{-- przycisk dodawania uwag do tej propozycji--}}
+    <div class="mt-3 mb-3">
+        <div class="col-12 mt-3">
+            <a href="{{route('nowaUwagaPropozycja', $propozycja->id)}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
+                <i class="bi bi-pen"></i> Dodaj swoje uwagi do zaproponowanego tamatu</a>
+        </div>
+    </div>
+
+    {{-- przycisk wysyłania listu do autora propozycji--}}
 
     <div class="mt-3 mb-3">
 

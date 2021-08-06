@@ -31,6 +31,15 @@ class UserDzialaniaController extends Controller
         return $walidated;
     }
 
+    protected function validatorUwagi(array $data)
+    {        $walidated= Validator::make($data, [
+        'naglowek' => ['required', 'string', 'min:20', 'max:300'],
+        'tresc' => ['required', 'string', 'min:100', 'max:4500']
+
+    ])->validate();
+        return $walidated;
+    }
+
     protected function validatorMedium(array $data){
         $walidated= Validator::make($data, [
             'nazwa' => ['required', 'string', 'min:3', 'max:100'],
@@ -143,6 +152,8 @@ class UserDzialaniaController extends Controller
 
     }
 
+
+
     public function lista_moich_uwag(){
 
         /* Pobieranie uwag do zagadnień i do propozycji osobno*/
@@ -166,6 +177,29 @@ class UserDzialaniaController extends Controller
 
 
     }
+
+    /* Formularz do dodawania dodawania uwag do propozycji tematów/*/
+    public function nowaUwagaPropozycja($id){
+$propozycjaTematu=Propozycje::findOrFail($id);
+$tytulPropozycji=$propozycjaTematu->tytul;
+        return view('tresc.userzyAktywnosc.nowaUwagaPropozycja', ['id'=>$id, 'tytulPropozycji'=>$tytulPropozycji]);
+    }
+
+    /* Zapisywanie  uwag do propozycji tematów*/
+    public function nowaUwagaPropozycjaZapisz(Request $request){
+
+        //$data=$request->all();
+        $data = $this->validatorUwagi($request->all());
+        $data = Arr::add($data, 'status', 'Nowa');
+        $data = Arr::add($data, 'propozycja_id', $request['propozycja_id']);
+        $data = Arr::add($data, 'dodal_user', Auth::user()->id);
+        $data = Arr::add($data, 'dodal_user_nazwa', \auth()->user()->name);
+        Propozycje_uwagi::create($data);
+        session()->flash('komunikat', "Uwaga do propozycji została dodana!");
+        return redirect(route('ustawieniaDane'));
+
+    }
+
 
     public function lista_uwag_do_moich_propozycji(){
 
@@ -224,7 +258,7 @@ class UserDzialaniaController extends Controller
 
     }
 
-/* TODO dorobić dodawanie uwag do zagadnienia i propozycji tematu*/
+
 
 
 

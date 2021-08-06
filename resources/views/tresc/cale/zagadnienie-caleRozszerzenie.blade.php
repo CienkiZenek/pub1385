@@ -41,12 +41,12 @@
     </nav>
     <div class="row">
 <div class=" mt-3 mb-3 col-12 fs-4 text-center">
-    {{$zagadnienie->zagadnienie}}
+    {{$zagadnienie->zagadnienie}} (Rozszerzenie)
 </div>
 </div>
     <div class="row">
         <div class="mb-2 col-md-8 col-sm-12" >
-           <div id="tresc"> {{$zagadnienie->tresc}} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
+           <div id="tresc"> {{$zagadnienie->rozszerz}} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
 
            </div>
@@ -57,7 +57,7 @@
                    href="https://twitter.com/intent/tweet"
                    data-size="large"
                    data-lang="pl"
-                   data-text="{{$zagadnienie->tresc}}"
+                   data-text="{{$zagadnienie->rozszerz}}"
                    data-url="{{Request::url()}}"
                 >
                     Tweet
@@ -149,7 +149,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$zagadnienie->tytulObrazek1}}</h5>
                     <p class="card-text">{{$zagadnienie->podpisObrazek1}}</p>
-                    {{--<a href="#" class="btn btn-primary">Go somewhere</a>--}}
+                   {{-- <a href="#" class="btn btn-primary">Go somewhere</a>--}}
                 </div>
             </div>
             @endif
@@ -172,26 +172,26 @@
 
     </div>
 
-    <div class="row">
-        @if(Str::length($zagadnienie->linkSlownikPdf)>4)
-        <div class="mb-2 mt-2 col-md-8 col-sm-12">
-                <div>
-                    Hasło w słowniku apologetycznym z 1894:</br>
-                    <a href="http://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$zagadnienie->linkSlownikPdf}}" target="_blank">{{$zagadnienie->trescLinku}}</a>
+            <div class="row">
+            @if(Str::length($zagadnienie->linkSlownikPdf)>4)
+                <div class="mb-2 mt-2 col-md-8 col-sm-12">
+                    <div>
+                        Hasło w słowniku apologetycznym z 1894:</br>
+                        <a href="http://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$zagadnienie->linkSlownikPdf}}" target="_blank">{{$zagadnienie->trescLinku}}</a>
+                    </div>
                 </div>
+            @endif
         </div>
-        @endif
-    </div>
+
 
 
     <div class="mb-3">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
 
-<a href="{{route('zagadnienieRozszerzenie', $zagadnienie->slug )}}" class="btn btn-primary mb-3" role="button" aria-pressed="true">Wersja rozszerzona</a>
+<a href="{{route('zagadnienieCale', $zagadnienie->slug )}}" class="btn btn-primary mb-3" role="button" aria-pressed="true">Wersja podstawowa</a>
 
     {{--<button class="btn btn-primary mt-5 mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#rozszerzenie" aria-expanded="false" aria-controls="usuwanie">
         Wersja rozszerzona
     </button>--}}
-
     {{--<div class="collapse" id="rozszerzenie">
         <div class="row">
 
@@ -207,7 +207,6 @@
 
             </div>
         </div>
-
 --}}{{-- Skrytp kopujacy treśc całego rozszerzenia! --}}{{--
         <script>
             var komunikat  = document.getElementById("komunikatKopiowanie");
