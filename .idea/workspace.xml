@@ -4,7 +4,6 @@
     <list default="true" id="3ca80ec6-f1d9-41cf-838d-39be79ee9d0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/obrazekKopiowanie.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/obrazekKopiowanie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/obrazekKopiowanie.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -489,12 +488,12 @@
       <workItem from="1627971448562" duration="7174000" />
       <workItem from="1628058157179" duration="11941000" />
       <workItem from="1628142758681" duration="12088000" />
-      <workItem from="1628229878990" duration="9433000" />
+      <workItem from="1628229878990" duration="9782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="594667000" />
+    <option name="totallyTimeSpent" value="595016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -906,7 +905,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/obrazekKopiowanie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
