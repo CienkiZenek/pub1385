@@ -38,7 +38,7 @@
         <figure class="figure">
             <figcaption class="figure-caption">{{ $mem->tytul }}</figcaption>
             <img src="{{$mem->Urlmem}}" id="memObrazek" class="figure-img img-fluid rounded kopiowanieObrazka" alt="...">
-            {{--{{$mem->Urlmem}}--}}
+            {{$mem->Urlmem}}
         </figure>
         {{--<div>Ostatnia modyfikacja: {{$mem->created_at->format('Y-m-d H:i:s')}}</div>--}}
 
@@ -73,7 +73,7 @@
 
     <span class="badge bg-primary"  onClick="pobierzObrazek()"><a href="{{$mem->Urlmem}}" target="_blank" download class="link-light text-decoration-none">Pobierz obrazek</a></span>
     <div id="komunikatKopiowanie"></div>
-    <span class="badge bg-primary" id="kopiujObrazek" >Kopiuj obrazek do schowka</span>
+    <span class="badge bg-primary" onClick="ustawienieSciezki('{{$mem->Urlmem}}')" id="kopiujObrazek" >Kopiuj obrazek do schowka</span>
 {{--<p>Can write ? <span id="can-write"></span></p>--}}
 {{--<button id="copy-img-btn">Copy image to clipboard</button>--}}
 

@@ -1,10 +1,19 @@
+
+var src ='';
+function ustawienieSciezki(sciezka) {
+    src =sciezka;
+    //console.log(src);
+}
+
 document.addEventListener('DOMContentLoaded', async function () {
+
+
        /* const canWriteEl = document.getElementById('can-write')*/
     const kopiujObrazek = document.getElementById('kopiujObrazek')
    // const img = document.querySelector('img')
     const img = document.getElementById('memObrazek')
    // const copyImgBtn = document.getElementById('copy-img-btn')
-    console.log(img.src);
+    //console.log(img.src);
     //console.log(kopiujObrazek);
     async function askWritePermission() {
 
@@ -54,8 +63,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     })*/
 
     kopiujObrazek.addEventListener('click', async () => {
+       // console.log('{{$mem->Urlmem}}');
         try {
-            const response = await fetch(img.src)
+           // const response = await fetch(img.src)
+            const response = await fetch(src)
            // console.log(img.src);
             const blob = await response.blob()
             await setToClipboard(blob)
@@ -64,4 +75,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             console.error(error)
         }
     })
+
+
 })
+
