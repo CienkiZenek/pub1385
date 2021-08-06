@@ -2,7 +2,7 @@
 var src ='';
 function ustawienieSciezki(sciezka) {
     src =sciezka;
-    //console.log(src);
+    console.log(src);
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function () {
    // const img = document.querySelector('img')
     const img = document.getElementById('memObrazek')
    // const copyImgBtn = document.getElementById('copy-img-btn')
-    //console.log(img.src);
+    console.log(img.src);
     //console.log(kopiujObrazek);
     async function askWritePermission() {
 
