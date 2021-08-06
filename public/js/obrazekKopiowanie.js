@@ -67,11 +67,10 @@ document.addEventListener('DOMContentLoaded', async function () {
        // console.log('{{$mem->Urlmem}}');
         try {
            // const response = await fetch(img.src)
-            //const response = await fetch(src)
+            const response = await fetch(src)
             console.log("W addEven...");
             console.log(src);
-            const response = await fetch('https://poradnikdyskutanta.pl/memy/Screenshot_1522845962.png')
-           // console.log(img.src);
+           // const response = await fetch('https://poradnikdyskutanta.pl/memy/Screenshot_1522845962.png')
             const blob = await response.blob()
             await setToClipboard(blob)
         } catch (error) {
