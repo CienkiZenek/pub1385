@@ -2,8 +2,8 @@
 var src ='';
 function ustawienieSciezki(sciezka) {
     src =sciezka;
-    console.log("W funkcji...");
-    console.log(src);
+   // console.log("W funkcji...");
+    //console.log(src);
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const canWrite = await askWritePermission()
     /*canWriteEl.textContent = canWrite
     canWriteEl.style.color = canWrite ? 'green' : 'red'*/
-    console.log(canWrite);
+    //console.log(canWrite);
 
     if(canWrite){
         kopiujObrazek.style.display = "inline";
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         try {
            // const response = await fetch(img.src)
             const response = await fetch(src)
-            console.log("W addEven...");
-            console.log(src);
+            //console.log("W addEven...");
+            //console.log(src);
            // const response = await fetch('https://poradnikdyskutanta.pl/memy/Screenshot_1522845962.png')
             const blob = await response.blob()
             await setToClipboard(blob)

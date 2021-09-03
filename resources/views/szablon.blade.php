@@ -46,7 +46,7 @@
 <nav class="navbar navbar-expand-lg navbar-light tlo-nav" >
     <div class="container-fluid">
         <a class="navbar-brand fs-3" href="/" style="color:#dc3545">
-            <img src="{{ URL::asset('/img/logoPoradnikNew.png')}}" width="226" height="80" title="PoradnikDyskutanta.pl wersja Alfa" alt="PoradnikDyskutanta.pl wersja Alfa">
+            <img src="{{ URL::asset('/img/logoPoradnik.png')}}" width="226" height="80" title="PoradnikDyskutanta.pl wersja Alfa" alt="PoradnikDyskutanta.pl wersja Alfa">
 
 
         </a>
@@ -175,7 +175,7 @@
     </div>
 
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.103</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.104</div>@endauth
 </footer>
 
 
