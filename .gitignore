@@ -2,8 +2,11 @@
 /public/hot
 /public/storage
 /public/memy
+public/memy
 /public/obrazki
+public/obrazki
 /public/pliki_bibliograf
+public/pliki_bibliograf
 /storage/*.key
 /storage/*.index
 /vendor

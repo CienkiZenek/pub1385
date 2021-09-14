@@ -96,10 +96,28 @@
         {{-- Postęp hasła--}}
         @include('dodatki.progresBar', ['tresc'=>'hasła', 'procent'=>$haslo->procent_tresci])
 
+        @if($haslo->zagadnienia->count()>0)
+            <div class="row mt-5 mb-3 fs-4">
+                <div>
+                    Zagadnienia wchodzące w skład tego hasła:
+                </div>
+
+                @foreach($haslo->zagadnienia as $zagadnienie)
+                    <div class="ms-2 mt-2 fs-4">
+
+                        <a href="{{ route('zagadnienieCale', $zagadnienie->slug) }}" class="link-dark">{{$zagadnienie->zagadnienie}}
+                        </a>
+
+                    </div>
+
+                @endforeach
+            </div>
+        @endif
+
         @if(Str::length($haslo->linkSlownikPdf)>2)
 
 
-        <div class="mt-3  fs-5"><a href="http://slownik1894.test/{{$haslo ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
+        <div class="mt-3  fs-5"><a href="https://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$haslo ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
         @endif
 
 
@@ -157,7 +175,7 @@
         @endforeach
     </div>
         @endif
-        <div class="mt-3 fs-5">Ostatnia modyfikacja: {{$haslo->created_at->format('Y-m-d')}}</div>
+
 
     </div>
 
@@ -166,7 +184,7 @@
 
 
 
-    @if($haslo->zagadnienia->count()>0)
+    {{--@if($haslo->zagadnienia->count()>0)
     <div class="row mt-3 fs-5">
         <div>
             Zagadnienia wchodzące w skład tego hasła:
@@ -182,7 +200,9 @@
 
         @endforeach
     </div>
-@endif
+@endif--}}
+
+<div class="mt-3 fs-5">Ostatnia modyfikacja: {{$haslo->created_at->format('Y-m-d')}}</div>
 
 
     @auth
