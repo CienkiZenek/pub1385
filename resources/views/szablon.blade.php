@@ -20,7 +20,7 @@
     <meta property="og:url"           content="@yield('og_url', '')" />
     <meta property="og:type"           content="@yield('og_type', 'website')" />
     <meta property="og:title"         content="@yield('og_title', 'Poradnik Dyskutanta')" />
-    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji. ')" />
+    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji.')" />
     <meta property="og:image"         content="@yield('og_image', '')" />
     <meta property="og:locale" content="pl_PL" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,8 +35,7 @@
     <link rel="stylesheet" href="{{ URL::asset('/css/fonty.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('/css/style.css')}}">
    {{-- <link rel="stylesheet" href="{{ URL::asset('/css/app.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ URL::asset('/css/fontawesome/all.css')}}">--}}
-    {{--<link rel="stylesheet" href="{{ URL::asset('/css/mdb/mdb.min.css')}}">--}}
+
 
     @livewireStyles
 </head>
@@ -172,10 +171,12 @@
     <div class="col-12 text-center" style="color: white">&reg; PoradnikDyskutanta 2021 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
         <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
+        <a class="link-dark" href="{{route('dzialyWszystkie')}}"  style="color: white">Wszystkie działy</a>
+
     </div>
 
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.104</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.105</div>@endauth
 </footer>
 
 

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Validator;
 use App\Listy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\HtmlString;
+use App\Kategorie;
+use App\Dzialy;
 
 class _PomocniczyController extends Controller
 {
@@ -87,5 +89,24 @@ $wiadomosc=$data['tresc'];
         // mail('w.operacz@poczta.onet.pl', 'Wiadomość z PoradnikDyskutanta.pl', 'aaaa');
         return redirect('/')->with('komunikat', 'Wysłano wiadomość do redakcji');
     }
+
+    public function dzial($slug){
+        $dzial=Dzialy::whereSlug($slug)->firstOrFail();
+
+        return view('tresc.podstrony.dzial', ['dzial'=>$dzial]);
+    }
+
+    public function dzialyWszystkie(){
+        $dzialy=Dzialy::all();
+
+        return view('tresc.podstrony.dzialyWszystkie', ['dzialy'=>$dzialy]);
+    }
+
+    public function kategoria($slug){
+        $kategoria=Kategorie::whereSlug($slug)->firstOrFail();
+
+        return view('tresc.podstrony.kategoria', ['kategoria'=>$kategoria]);
+    }
+
 
 }

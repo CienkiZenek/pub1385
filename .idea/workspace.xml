@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ca80ec6-f1d9-41cf-838d-39be79ee9d0f" name="Default Changelist" comment="" />
+    <list default="true" id="3ca80ec6-f1d9-41cf-838d-39be79ee9d0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/dodatki/progresBar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tresc/podstrony/dzial.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tresc/podstrony/dzialyWszystkie.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tresc/podstrony/kategoria.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Zagadnienia_uwagiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Zagadnienia_uwagiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/fontawesome/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/mdb/mdb.dark.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/mdb/mdb.dark.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/mdb/mdb.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/mdb/mdb.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/kopiowanie.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/kopiowanie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/szablon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/szablon.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tresc/cale/haslo-cale.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/cale/haslo-cale.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/zagadnienia_uwagi.index-shm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/zagadnienia_uwagi.index-shm" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="30" column="97" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="97" />
+            <state relative-caret-position="1500">
+              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
               <folding>
                 <element signature="e#7#44#0#PHP" expanded="true" />
               </folding>
@@ -39,20 +74,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/szablon.blade.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/haslo-cale.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="177" column="51" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
+            <state relative-caret-position="431">
+              <caret line="57" column="59" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1410">
+              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="2130">
+              <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -68,13 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wyslijuser</find>
-      <find>dodaj</find>
-      <find>kopiuj</find>
-      <find>mem</find>
-      <find>memy</find>
-      <find>copyTextBtn</find>
-      <find>SCOUT_ELASTIC_HOST</find>
       <find>list</find>
       <find>listDoRedakcji</find>
       <find>listdo</find>
@@ -98,6 +135,13 @@
       <find>Poradnik</find>
       <find>Pom</find>
       <find>zagadnienie/</find>
+      <find>all.</find>
+      <find>zajawka</find>
+      <find>rozs</find>
+      <find>uwagiZapisNowe</find>
+      <find>dzialyWszystkie</find>
+      <find>tre</find>
+      <find>$haslo-&gt;procent_tresci</find>
     </findStrings>
     <replaceStrings>
       <replace>$komunikat</replace>
@@ -106,6 +150,7 @@
       <replace>bi-chat-left-quote-fill</replace>
       <replace>bi-chat-left-fill</replace>
       <replace>bi-chat-square-text-fill</replace>
+      <replace>$procent</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -114,12 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Linki.php" />
-        <option value="$PROJECT_DIR$/app/Media.php" />
-        <option value="$PROJECT_DIR$/app/Pliki.php" />
-        <option value="$PROJECT_DIR$/app/Przekazdnia.php" />
-        <option value="$PROJECT_DIR$/app/Przypisy.php" />
-        <option value="$PROJECT_DIR$/app/Tagi.php" />
         <option value="$PROJECT_DIR$/app/Zagadnienia.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
@@ -139,14 +178,12 @@
         <option value="$PROJECT_DIR$/resources/views/tresc/glowna-start.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/ustawienia.blade.php" />
         <option value="$PROJECT_DIR$/app/Listy.php" />
-        <option value="$PROJECT_DIR$/public/js/kopiowanie.js" />
         <option value="$PROJECT_DIR$/public/index.js" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/app/Memy.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/tresc/podstrony/kontakt.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" />
         <option value="$PROJECT_DIR$/resources/views/emails/listDoUsera.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/wiadomosciForm/formListUser.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ListyController.php" />
@@ -156,15 +193,23 @@
         <option value="$PROJECT_DIR$/resources/views/tresc/userzyAktywnosc/tematEdycja.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserDzialaniaController.php" />
         <option value="$PROJECT_DIR$/resources/views/tresc/userzyAktywnosc/nowaUwagaPropozycja.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ZagadnieniaController.php" />
-        <option value="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php" />
         <option value="$PROJECT_DIR$/public/js/obrazekKopiowanie_old.js" />
         <option value="$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php" />
         <option value="$PROJECT_DIR$/public/js/obrazekKopiowanie.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Zagadnienia_uwagiController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php" />
+        <option value="$PROJECT_DIR$/resources/views/tresc/podstrony/dzialyWszystkie.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/tresc/podstrony/dzial.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/tresc/podstrony/kategoria.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/szablon.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/js/kopiowanie.js" />
+        <option value="$PROJECT_DIR$/resources/views/dodatki/progresBar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/tresc/cale/haslo-cale.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php" />
       </list>
     </option>
   </component>
@@ -307,13 +352,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
               <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
@@ -326,10 +381,41 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dodatki" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tresc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tresc" type="462c0819:PsiDirectoryNode" />
+              <item name="cale" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pomocnik" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pomocnik" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="tresc" type="462c0819:PsiDirectoryNode" />
+              <item name="podstrony" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,17 +427,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\_StronyWWW\pomocnik\app\Http\Controllers\Mail" />
-      <recent name="D:\_StronyWWW\pomocnik\resources\views\tresc\cale" />
-      <recent name="D:\Projekty\pomocnik\resources\views\auth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projekty\pomocnik\resources\views\tresc\podstrony" />
       <recent name="D:\Projekty\pomocnik\public\js" />
       <recent name="D:\Projekty\pomocnik\resources\views\tresc\cale" />
       <recent name="D:\Projekty\pomocnik\resources\views\tresc\userzyAktywnosc" />
       <recent name="D:\Projekty\pomocnik\public\css" />
-      <recent name="D:\Projekty\pomocnik\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\_StronyWWW\pomocnik\app\Http\Controllers\Mail" />
+      <recent name="D:\_StronyWWW\pomocnik\resources\views\tresc\cale" />
+      <recent name="D:\Projekty\pomocnik\resources\views\auth" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -477,12 +563,16 @@
       <workItem from="1630308947347" duration="601000" />
       <workItem from="1630398882973" duration="1876000" />
       <workItem from="1630586767463" duration="315000" />
-      <workItem from="1630654932541" duration="1393000" />
+      <workItem from="1630654932541" duration="2759000" />
+      <workItem from="1631085978917" duration="3102000" />
+      <workItem from="1631168792431" duration="6989000" />
+      <workItem from="1631258062393" duration="11392000" />
+      <workItem from="1631604043598" duration="409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="600241000" />
+    <option name="totallyTimeSpent" value="623499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,10 +584,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="7" width="1926" height="1040" extended-state="1" />
+    <frame x="1" y="7" width="1926" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19185424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20042872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -545,156 +635,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/dodatki/karuzela.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="52" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/memy.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_GlownyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/PropozycjeUwagiService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/glowna-start.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1302">
-          <caret line="157" column="18" lean-forward="true" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TagiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Propozycje_uwagiController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Zagadnienia_uwagiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/user/ustawienia.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="36" selection-start-line="36" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.js" />
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/_mem-cale.blade.php" />
-    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Memy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Przekazdnia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#23#77#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/scout_elastic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/scout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-925">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/kontakt.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Listy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PropozycjeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -711,25 +651,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="127" selection-start-line="14" selection-start-column="127" selection-end-line="14" selection-end-column="127" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MemyController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/propozycja-cale.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/propozycja_uwaga-cale.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -815,20 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="174" column="6" selection-start-line="174" selection-start-column="6" selection-end-line="174" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ZagadnieniaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
@@ -850,23 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/obrazekKopiowanie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/kopiowanie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="28" selection-start-line="5" selection-end-line="5" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/mem-cale.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="796">
@@ -874,27 +770,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/fontawesome/all.css" />
+    <entry file="file://$PROJECT_DIR$/public/css/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/fonty.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Zagadnienia_uwagiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/miejsce-cale.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/propozycja-cale.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/miejsca.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dodatki/miejsceIkony.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="e#440#485#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/kontakt.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/tagi.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Dzialy.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_GlownyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1230">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Kategorie.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/kategoria.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Hasla.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/tematy.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="29" column="32" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/dzialyWszystkie.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/_PomocniczyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/podstrony/dzial.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HaslaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="21" column="106" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/szablon.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="173" column="98" selection-start-line="173" selection-start-column="98" selection-end-line="173" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#a#2;n#div#1;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/obrazekKopiowanie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="962">
+          <caret line="70" column="42" lean-forward="true" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/kopiowanie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1096">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dodatki/znalezioneIkony.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dodatki/komunikaty.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dodatki/karuzela.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="30" column="97" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="97" />
+        <state relative-caret-position="1500">
+          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
           <folding>
             <element signature="e#7#44#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/szablon.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-caleRozszerzenie.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="177" column="51" selection-start-line="177" selection-start-column="51" selection-end-line="177" selection-end-column="51" />
+        <state relative-caret-position="1410">
+          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="2130">
+          <caret line="71" column="10" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/zagadnienie-cale.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/dodatki/progresBar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="796">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tresc/cale/haslo-cale.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="57" column="59" selection-start-line="57" selection-start-column="40" selection-end-line="57" selection-end-column="59" />
         </state>
       </provider>
     </entry>

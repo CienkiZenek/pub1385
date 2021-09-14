@@ -38,8 +38,8 @@ class Zagadnienia_uwagiController extends Controller
 
     public function create(Request $request)
     {
-        $data=$request->all();
-        // $data = $this->validator($request->all());
+        //$data=$request->all();
+        $data = $this->validator($request->all());
         $data = Arr::add($data, 'status', 'Nowa');
         $data = Arr::add($data, 'dodal_user', \Auth::user()->id);
         $data = Arr::add($data, 'dodal_user_nazwa', \Auth::user()->name);

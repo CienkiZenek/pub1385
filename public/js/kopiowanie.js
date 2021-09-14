@@ -1,7 +1,7 @@
 // console.log("Tag usunięty!");
 // Kopiowanie całości lub fragmentów zagadnień/haseł
 var komunikat  = document.getElementById("komunikatKopiowanie");
-
+var twiterZaznaczone = document.getElementById("tw_zazn");
 
 function kopiujCalaTresc() {
 
@@ -46,6 +46,7 @@ document.onselectionchange = function() {
     dlugosc =  document.getSelection().toString().length
     if(dlugosc>10){
         komunikat.style.display = "block";
+        twiterZaznaczone.style.opacity = 100;
         let rangeLink = new Range();
         rangeLink.selectNodeContents(dodaj);
        // document.getSelection().removeAllRanges();
@@ -68,6 +69,7 @@ document.onselectionchange = function() {
 function wyczyscKomunikat() {
     komunikat.style.display = "none";
     komunikat.innerHTML = '';
+    twiterZaznaczone.style.opacity = 0;
 
 }
 

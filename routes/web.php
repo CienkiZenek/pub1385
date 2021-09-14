@@ -45,6 +45,11 @@ Route::get('/szukaj', '_GlownyController@start');
 //Koniec wyszukiwania na glownej stronie
 
 // podstrony
+
+Route::get('/dzial/{slug}', '_PomocniczyController@dzial')->name('dzial');
+Route::get('/dzialyWszystkie', '_PomocniczyController@dzialyWszystkie')->name('dzialyWszystkie');
+Route::get('/kategoria/{slug}', '_PomocniczyController@kategoria')->name('kategoria');
+
 // kontakt -- list do redakcji
 Route::post('/listDoRedakcji', '_PomocniczyController@listDoRedakcji')->name('listDoRedakcji');
 Route::post('/listDoRedakcjiUser', '_PomocniczyController@listDoRedakcjiUser')->name('listDoRedakcjiUser');

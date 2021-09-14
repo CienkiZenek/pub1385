@@ -32,7 +32,7 @@
 
 
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb fs-5 mb-4">
             <li class="breadcrumb-item"><a href="#">{{$zagadnienie -> dzialy->dzial}}</a></li>
             <li class="breadcrumb-item"><a href="#">{{$zagadnienie ->kategorie->kategoria}}</a></li>
             <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('hasloCale', $zagadnienie ->hasla->slug) }}">{{$zagadnienie ->hasla->haslo}}</a></li>
@@ -40,13 +40,13 @@
         </ol>
     </nav>
     <div class="row">
-<div class=" mt-3 mb-3 col-12 fs-4 text-center">
-    {{$zagadnienie->zagadnienie}} (Rozszerzenie)
+<div class=" mt-3 mb-4 col-12 fs-3" style="text-indent: 1em">
+    {{ $zagadnienie->zagadnienie}} (Wersja zozszerzona)
 </div>
 </div>
     <div class="row">
         <div class="mb-2 col-md-8 col-sm-12" >
-           <div id="tresc"> {{$zagadnienie->rozszerz}} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
+           <div id="tresc" class="fs-5" style="text-indent: 1em"> {!! $zagadnienie->rozszerz!!} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
 
            </div>
@@ -80,22 +80,25 @@
 
 
 
-<div>
+<div class=" fs-5">
 
-            <i class="bi bi-clipboard fs-3" onClick="kopiujCalaTresc()" id="wszystko" title="Skopiuj całą treść zagadnienia do schowka"></i>
+    Kopiuj całe zagadnienie: <i class="bi bi-clipboard fs-2" onClick="kopiujCalaTresc()" id="wszystko" title="Skopiuj całą treść zagadnienia do schowka"></i>
             <div id="komunikatKopiowanie"></div>
 </div>
 
+            {{-- Postęp hasła--}}
+            @include('dodatki.progresBar', ['tresc'=>'zagadnienia', 'procent'=>$zagadnienie->procent_tresci])
+
 
             @if(Str::length($zagadnienie->linkSlownikPdf)>2)
-                <div class="mt-3"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
+                <div class="mt-3 fs-5"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
             @endif
             @if($zagadnienie->bibliografia->count()>0)
-            <div class="mt-3">Bibliografia</div>
+            <div class="mt-3 fs-5">Bibliografia</div>
             <div class="">
 
                 @foreach($zagadnienie->bibliografia as $bibl)
-                    <div class="ms-2 mt-2">
+                    <div class="ms-2 mt-2 fs-5">
 {{$bibl->tresc}}
                     </div>
                 @endforeach
@@ -103,10 +106,10 @@
             @endif
 
             @if($zagadnienie->linki->count()>0)
-            <div class="mt-3">Linki</div>
+            <div class="mt-3 fs-5">Linki</div>
             <div>
                 @foreach($zagadnienie->linki as $link)
-                    <div class="ms-2 mt-2">
+                    <div class="ms-2 mt-2 fs-5">
                         <a href="{{$link->link}}" target="_blank" class="link-dark">{{$link->tresc}}</a>
                     </div>
                 @endforeach
@@ -115,10 +118,10 @@
 
 
             @if($zagadnienie->pliki->count()>0)
-            <div class="mt-3">Pliki</div>
+            <div class="mt-3 fs-5">Pliki</div>
             <div>
                 @foreach($zagadnienie->pliki as $plik)
-                    <div class="ms-2 mt-2">
+                    <div class="ms-2 mt-2 fs-5">
                         <a href=" {{$plik->urlplik}}" target="_blank" class="link-dark">{{$plik->plik_nazwa}}</a>
                     </div>
                 @endforeach
@@ -127,10 +130,10 @@
 
 
                             @if($zagadnienie->tagi->count()>0)
-                <div class="mt-3">Tagi</div>
+                <div class="mt-3 fs-5">Tagi</div>
 
                 @foreach($zagadnienie->tagi as $tag)
-                    <div class="ms-2 mt-2">
+                    <div class="ms-2 mt-2 fs-5">
                         <a href="{{ route('tagCale', $tag['id']) }}" class="link-dark">{{$tag->nazwa}}</a>
                     </div>
                 @endforeach
@@ -143,7 +146,7 @@
 
         <div class="col-md-4 col-sm-12">
              @if(Str::length($zagadnienie->obrazek1)>5)
-            <div class="card mb-5" >
+            <div class="card mb-5 fs-5" >
                 <a href="{{$zagadnienie->urlobrazek1}}" data-lightbox="obrazek1" data-title="{{$zagadnienie->tytulObrazek1}}">
                 <img src="{{$zagadnienie->urlobrazek1}}" class="card-img-top" alt="{{$zagadnienie->tytulObrazek1}}"></a>
                 <div class="card-body">
@@ -155,12 +158,12 @@
             @endif
 
             @if(Str::length($zagadnienie->obrazek2)>5)
-                <div class="card mb-5" style="width: 18rem;">
+                <div class="card mb-5 fs-5" style="width: 18rem;">
                     <a href="{{$zagadnienie->urlobrazek2}}" data-lightbox="obrazek1" data-title="{{$zagadnienie->tytulObrazek2}}">
                         <img src="{{$zagadnienie->urlobrazek2}}" class="card-img-top" alt="{{$zagadnienie->tytulObrazek2}}"></a>
                     <div class="card-body">
-                        <h5 class="card-title">{{$zagadnienie->tytulObrazek2}}</h5>
-                        <p class="card-text">{{$zagadnienie->podpisObrazek2}}</p>
+                        <h5 class="card-title fs-5">{{$zagadnienie->tytulObrazek2}}</h5>
+                        <p class="card-text fs-5">{{$zagadnienie->podpisObrazek2}}</p>
                         {{--<a href="#" class="btn btn-primary">Go somewhere</a>--}}
                     </div>
                 </div>
@@ -175,7 +178,7 @@
             <div class="row">
             @if(Str::length($zagadnienie->linkSlownikPdf)>4)
                 <div class="mb-2 mt-2 col-md-8 col-sm-12">
-                    <div>
+                    <div class=" fs-5">
                         Hasło w słowniku apologetycznym z 1894:</br>
                         <a href="http://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$zagadnienie->linkSlownikPdf}}" target="_blank">{{$zagadnienie->trescLinku}}</a>
                     </div>
@@ -185,7 +188,7 @@
 
 
 
-    <div class="mb-3">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
+    <div class="mb-3 fs-5">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
 
 <a href="{{route('zagadnienieCale', $zagadnienie->slug )}}" class="btn btn-primary mb-3" role="button" aria-pressed="true">Wersja podstawowa</a>
 
@@ -249,10 +252,10 @@
   @auth
       @if(Auth::user()->hasVerifiedEmail())
         @if($zagadnienie->uwagi->count()>0)
-        <div class="mb-3">
-        <div>Uwagi do tego zagadnienia:</div>
+        <div class="mb-3 mt-3 fs-5">
+        <div class=" fs-5">Uwagi do tego zagadnienia:</div>
         @foreach($zagadnienie->uwagi as $uwaga)
-            <div class="ms-2 mt-2">
+            <div class="ms-2 mt-2 fs-5">
 
                 <a href="{{ route('uwagaTematPodglad', $uwaga->id) }}" class="link-dark">{{Str::limit($uwaga->naglowek, 50) }}
                 </a>
@@ -264,7 +267,7 @@
 @endif
 
 @if(Auth::user()->mozeKomentowac())
-    <div class="mt-3">Moja nowa uwaga do tego zagadnienia:</div>
+    <div class=" fs-5 mt-5">Moja nowa uwaga do tego zagadnienia:</div>
 
     <form action="{{route('uwagiZapisNowe')}}" method="POST">
     @csrf
@@ -275,9 +278,9 @@
             <div class="col-12">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" >Naglowek:</span>
+                        <span class="input-group-text fs-5" >Naglowek:</span>
                     </div>
-                    <textarea class="form-control{{ $errors->has('naglowek') ? ' is-invalid' : '' }}"
+                    <textarea class=" fs-5 form-control{{ $errors->has('naglowek') ? ' is-invalid' : '' }}"
                               name="naglowek" id="naglowek" rows="2">
                         {{ old('naglowek') }}</textarea>
                 </div>
@@ -289,9 +292,9 @@
             <div class="col-12">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" >Tresc:</span>
+                        <span class="input-group-text fs-5" >Tresc:</span>
                     </div>
-                    <textarea class="form-control{{ $errors->has('tresc') ? ' is-invalid' : '' }}"
+                    <textarea class=" fs-5 form-control{{ $errors->has('tresc') ? ' is-invalid' : '' }}"
                               name="tresc" id="tresc" rows="10">
                         {{ old('tresc') }}</textarea>
                 </div>
@@ -301,7 +304,7 @@
 
         <div class="row mb-5 mt-3">
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Zapisz</button>
+                <button type="submit" class="btn btn-primary fs-5">Zapisz</button>
             </div>
 
         </div>
