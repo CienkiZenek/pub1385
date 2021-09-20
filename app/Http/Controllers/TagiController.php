@@ -12,9 +12,9 @@ class TagiController extends Controller
         return view('tresc.podstrony.tagi', ['Wyniki'=>$tagi]);
     }
 
-    public function tagCale($id){
+    public function tagCale($slug){
 
-        $tag = Tagi::findOrFail($id);
+        $tag = Tagi::whereSlug($slug)->firstOrFail();
 
         return view('tresc.cale.tag-cale', ['tag'=>$tag]);
 

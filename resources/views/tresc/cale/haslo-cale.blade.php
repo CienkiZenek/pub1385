@@ -55,7 +55,12 @@
         </div>--}}
 
 
-        <div id="tresc" class="mb-2 fs-5 col-lg-9 col-md-12" style="text-indent: 1em">{!! $haslo -> tresc !!}
+        <div id="tresc" class="mb-2 fs-5 col-lg-9 col-md-12" style="text-indent: 1em">
+            <p class="akapit">
+            {!! Str::replace("\n","</p><p class='akapit'>",$haslo -> tresc) !!}
+
+            {{-- nl2br($haslo -> tresc) --}}
+            </p>
             <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
         </div>
 
@@ -103,7 +108,7 @@
                 </div>
 
                 @foreach($haslo->zagadnienia as $zagadnienie)
-                    <div class="ms-2 mt-2 fs-4">
+                    <div class="ms-2 mt-2 fs-5">
 
                         <a href="{{ route('zagadnienieCale', $zagadnienie->slug) }}" class="link-dark">{{$zagadnienie->zagadnienie}}
                         </a>

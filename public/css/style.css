@@ -15,6 +15,10 @@ body
 
 }
 
+.akapit{
+    text-indent: 2em;
+    text-align: justify;
+}
 .wys40{
     min-height: 40px;
 }

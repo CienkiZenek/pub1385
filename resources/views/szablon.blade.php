@@ -17,11 +17,11 @@
 
     {{--Open Graph dane dla facebooka i Twittera przy udostepnianiu--}}
 
-    <meta property="og:url"           content="@yield('og_url', '')" />
+    <meta property="og:url"           content="@yield('og_url', 'https://poradnikdyskutanta.pl')" />
     <meta property="og:type"           content="@yield('og_type', 'website')" />
     <meta property="og:title"         content="@yield('og_title', 'Poradnik Dyskutanta')" />
     <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji.')" />
-    <meta property="og:image"         content="@yield('og_image', '')" />
+    <meta property="og:image"         content="@yield('og_image', 'img/poradnikObrazek.jpg')" />
     <meta property="og:locale" content="pl_PL" />
     <meta name="twitter:card" content="summary_large_image" />
     {{--Koniec Open Graph --}}
@@ -40,7 +40,15 @@
     @livewireStyles
 </head>
 <body class="d-flex flex-column min-vh-100">
-
+{{--
+Święty Michale Archaniele,
+ wspomagaj nas w walce, a przeciw niegodziwości
+  i zasadzkom złego ducha bądź naszą obroną.
+   Oby go Bóg pogromić raczył, pokornie o to prosimy,
+    a Ty, Wodzu niebieskich zastępów, szatana i inne
+     duchy złe, które na zgubę dusz ludzkich po tym
+      świecie krążą, mocą Bożą strąć do piekła. Amen.
+--}}
 @include('cookieConsent::index')
 <nav class="navbar navbar-expand-lg navbar-light tlo-nav" >
     <div class="container-fluid">
@@ -176,7 +184,7 @@
     </div>
 
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.105</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.106</div>@endauth
 </footer>
 
 

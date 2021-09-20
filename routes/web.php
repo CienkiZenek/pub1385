@@ -33,7 +33,7 @@ Route::get('/zagadnienieRozszerzenie/{slug}', 'ZagadnieniaController@zagadnienie
 Route::get('/info/{id}', 'InfoController@infoCale')->name('infoCale')->middleware('UserAktywny');
 Route::get('/komunikat/{id}', 'KomunikatyController@komunikatCale')->name('komunikatCale');
 Route::get('/przekaz/{id}', 'PrzekazdniaController@przekazCale')->name('przekazCale');
-Route::get('/tag/{id}', 'TagiController@tagCale')->name('tagCale');
+Route::get('/tag/{slug}', 'TagiController@tagCale')->name('tagCale');
 Route::get('/memy/{id}', 'MemyController@memCale')->name('memCale');
 
 // Koniec całych wpisów
@@ -171,3 +171,7 @@ function () {
 // captcha
 Route::get('refresh_captcha', '_GlownyController@refreshCaptcha')->name('refresh_captcha');
 // koniec captcha
+
+// pobieranie plików
+Route::get('/pobierz', 'MemyController@pobierzObrazek')->name('pobierz');
+// Koniec pobierania plików

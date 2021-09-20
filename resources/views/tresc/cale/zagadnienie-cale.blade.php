@@ -46,9 +46,16 @@
 </div>
     <div class="row">
         <div class=" col-md-8 col-sm-12" >
-           <div id="tresc" class="fs-5 " style="text-indent: 1em"> {!! $zagadnienie->tresc!!} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
-               <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
+           <div id="tresc" class="fs-5 " style="text-indent: 1em">
 
+               <p class="akapit">
+               {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->tresc)!!}
+
+               </p>
+               {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
+               <div id="dodaj" style="color: white; font-size: 1px">({{Request::url()}})
+               </div>
+{{--nl2br($zagadnienie->tresc) --}}
            </div>
 
             <div class="d-flex mt-4 mb-4">
@@ -148,7 +155,7 @@
                 <a href="{{$zagadnienie->urlobrazek1}}" data-lightbox="obrazek1" data-title="{{$zagadnienie->tytulObrazek1}}">
                 <img src="{{$zagadnienie->urlobrazek1}}" class="card-img-top" alt="{{$zagadnienie->tytulObrazek1}}"></a>
                 <div class="card-body">
-                    <h5 class="card-title">{{$zagadnienie->tytulObrazek1}}</h5>
+                   {{-- <h5 class="card-title">{{$zagadnienie->tytulObrazek1}}</h5>--}}
                     <p class="card-text">{{$zagadnienie->podpisObrazek1}}</p>
                     {{--<a href="#" class="btn btn-primary">Go somewhere</a>--}}
                 </div>
@@ -160,7 +167,7 @@
                     <a href="{{$zagadnienie->urlobrazek2}}" data-lightbox="obrazek1" data-title="{{$zagadnienie->tytulObrazek2}}">
                         <img src="{{$zagadnienie->urlobrazek2}}" class="card-img-top" alt="{{$zagadnienie->tytulObrazek2}}"></a>
                     <div class="card-body">
-                        <h5 class="card-title">{{$zagadnienie->tytulObrazek2}}</h5>
+                       {{-- <h5 class="card-title">{{$zagadnienie->tytulObrazek2}}</h5>--}}
                         <p class="card-text">{{$zagadnienie->podpisObrazek2}}</p>
                         {{--<a href="#" class="btn btn-primary">Go somewhere</a>--}}
                     </div>
@@ -185,9 +192,12 @@
     </div>
 
 
-    <div class="mb-3 fs-5">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
+    <div class="mb-5 fs-5">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
 
+@if(Str::length($zagadnienie->rozszerz)>10)
 <a href="{{route('zagadnienieRozszerzenie', $zagadnienie->slug )}}" class="btn btn-primary mb-3" role="button" aria-pressed="true">Wersja rozszerzona tego zagadnienia</a>
+
+@endif
 
     {{--<button class="btn btn-primary mt-5 mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#rozszerzenie" aria-expanded="false" aria-controls="usuwanie">
         Wersja rozszerzona

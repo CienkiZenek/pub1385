@@ -13,9 +13,9 @@
                     @foreach($tematy as $temat)
                         <p class="">
                             @if(isset($temat->haslo))
-                            <a href="{{ route('hasloCale', $temat->slug) }}" class="link-dark text-decoration-none">{{ Str::limit($temat->haslo, 30) }} (Hasło)</a>
+                            <a href="{{ route('hasloCale', $temat->slug) }}" class="link-dark text-decoration-none">{{ Str::limit($temat->haslo, 30) }} </a>
                         @else
-                                <a href="{{ route('zagadnienieCale', $temat->slug) }}" class="link-dark text-decoration-none">{{ Str::limit($temat->zagadnienie, 30) }} (Zagadnienie)</a>
+                                <a href="{{ route('zagadnienieCale', $temat->slug) }}" class="link-dark text-decoration-none">{{ Str::limit($temat->zagadnienie, 30) }} ({{$temat->hasla->haslo}})</a>
                             @endif
 
                         </p>
@@ -197,7 +197,7 @@
             </div>
             <div class="card-body">
                 @foreach($tagi as $tag)
-                    <span class=""><a href="{{ route('tagCale', $tag['id']) }}" class="@if ($loop->even) link-primary text-decoration-none @else link-secondary text-decoration-none @endif">{{ $tag['nazwa'] }}</a>
+                    <span class=""><a href="{{ route('tagCale', $tag['slug']) }}" class="@if ($loop->even) link-primary text-decoration-none @else link-secondary text-decoration-none @endif">{{ $tag['nazwa'] }}</a>
                     </span>
                 @endforeach
 

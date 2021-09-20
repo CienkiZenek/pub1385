@@ -6,7 +6,7 @@
 @section('og_url', Request::url())
 @section('og_type', 'article')
 @section('og_title', 'Poradnik dyskutant - '.$zagadnienie->zagadnienie)
-@section('og_description', $zagadnienie->zajawka)
+@section('og_description', 'Opis  '.$zagadnienie->zajawka)
 
 @if(Str::length($zagadnienie->obrazek1)>5)
 @section('og_image', $zagadnienie->urlobrazek1)

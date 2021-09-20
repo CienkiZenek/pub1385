@@ -72,7 +72,11 @@
 
 
     <span class="badge bg-primary"  onClick="pobierzObrazek()"><a href="{{$mem->Urlmem}}" target="_blank" download class="link-light text-decoration-none">Pobierz obrazek</a></span>
-    <div id="komunikatKopiowanie"></div>
+    {{--<span class="badge bg-info"  ><a href="{{route('pobierz')}}"  class="link-light text-decoration-none">Pobierz obrazek 2</a></span>--}}
+{{--*todo sprawdzić w kolejnych wersjach!!! --}}
+
+
+<div id="komunikatKopiowanie"></div>
     <span class="badge bg-primary" onClick="ustawienieSciezki('{{$mem->Urlmem}}')" id="kopiujObrazek" >Kopiuj obrazek do schowka</span>
 {{--<p>Can write ? <span id="can-write"></span></p>--}}
 {{--<button id="copy-img-btn">Copy image to clipboard</button>--}}
