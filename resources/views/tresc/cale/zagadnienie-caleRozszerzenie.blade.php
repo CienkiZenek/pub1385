@@ -6,7 +6,14 @@
 @section('og_url', Request::url())
 @section('og_type', 'article')
 @section('og_title', 'Poradnik dyskutant - '.$zagadnienie->zagadnienie)
-@section('og_description', 'Opis  '.$zagadnienie->zajawka)
+
+{{--@section('og_description', 'Opis  '.$zagadnienie->zajawka)--}}
+
+@if(Str::length($zagadnienie->zajawka)>10)
+    @section('og_description', Str::limit($haslo -> tresc, 45))
+@else()
+    @section('og_description', 'Poradnik Dyskutanta - pomaga w znalezieniu argumantów podczas interentowej dyskusji')
+@endif()
 
 @if(Str::length($zagadnienie->obrazek1)>5)
 @section('og_image', $zagadnienie->urlobrazek1)
@@ -57,7 +64,7 @@
                    href="https://twitter.com/intent/tweet"
                    data-size="large"
                    data-lang="pl"
-                   data-text="{{$zagadnienie->rozszerz}}"
+                   data-text="{{strip_tags($zagadnienie->rozszerz)}}"
                    data-url="{{Request::url()}}"
                 >
                     Tweet

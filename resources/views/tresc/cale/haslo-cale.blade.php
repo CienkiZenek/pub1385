@@ -6,8 +6,11 @@
 @section('og_url', Request::url())
 @section('og_type', 'article')
 @section('og_title', 'Poradnik dyskutant - '.$haslo -> haslo)
-@section('og_description', 'Opis - '.Str::limit($haslo -> tresc, 45))
-
+@if(Str::length($haslo -> tresc)>10)
+@section('og_description', Str::limit($haslo -> tresc, 45))
+@else()
+    @section('og_description', 'Poradnik Dyskutanta - pomaga w znalezieniu argumantów podczas interentowej dyskusji')
+    @endif()
 
 {{-- facebook SDK --}}
 <div id="fb-root"></div>
@@ -71,7 +74,7 @@
                href="https://twitter.com/intent/tweet"
                data-size="large"
                data-lang="pl"
-               data-text="{{$haslo->tresc}}"
+               data-text="{{strip_tags($haslo->tresc)}}"
                data-url="{{Request::url()}}"
             >
                 Tweet

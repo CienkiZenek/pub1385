@@ -20,8 +20,12 @@
     <meta property="og:url"           content="@yield('og_url', 'https://poradnikdyskutanta.pl')" />
     <meta property="og:type"           content="@yield('og_type', 'website')" />
     <meta property="og:title"         content="@yield('og_title', 'Poradnik Dyskutanta')" />
-    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji.')" />
-    <meta property="og:image"         content="@yield('og_image', 'img/poradnikObrazek.jpg')" />
+    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji')" />
+    <meta property="og:image"         content="@yield('og_image', 'https://poradnikdyskutanta.pl/img/poradnikObrazek.jpg')" />
+
+    {{--<meta property="og:image:width"        content="" />
+    {{--<meta property="og:image:height"        content="" />
+    --}}
     <meta property="og:locale" content="pl_PL" />
     <meta name="twitter:card" content="summary_large_image" />
     {{--Koniec Open Graph --}}
@@ -184,7 +188,7 @@
     </div>
 
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.106</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.107</div>@endauth
 </footer>
 
 
