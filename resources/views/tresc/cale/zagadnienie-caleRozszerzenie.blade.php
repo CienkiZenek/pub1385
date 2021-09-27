@@ -53,7 +53,8 @@
 </div>
     <div class="row">
         <div class="mb-2 col-md-8 col-sm-12" >
-           <div id="tresc" class="fs-5" style="text-indent: 1em"> {!! $zagadnienie->rozszerz!!} {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
+           <div id="tresc" class="fs-5" style="text-indent: 1em"> {!! $zagadnienie->rozszerz!!}
+               {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
 
            </div>
@@ -64,7 +65,7 @@
                    href="https://twitter.com/intent/tweet"
                    data-size="large"
                    data-lang="pl"
-                   data-text="{{strip_tags($zagadnienie->rozszerz)}}"
+                   data-text="{{Str::limit(strip_tags($zagadnienie->rozszerz), 2500)}}"
                    data-url="{{Request::url()}}"
                 >
                     Tweet

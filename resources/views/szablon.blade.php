@@ -20,7 +20,7 @@
     <meta property="og:url"           content="@yield('og_url', 'https://poradnikdyskutanta.pl')" />
     <meta property="og:type"           content="@yield('og_type', 'website')" />
     <meta property="og:title"         content="@yield('og_title', 'Poradnik Dyskutanta')" />
-    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas interentowej dyskusji')" />
+    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas internetowej dyskusji')" />
     <meta property="og:image"         content="@yield('og_image', 'https://poradnikdyskutanta.pl/img/poradnikObrazek.jpg')" />
 
     {{--<meta property="og:image:width"        content="" />
@@ -109,6 +109,79 @@
     </div>
 </nav>
 
+
+<div class="container-fluid d-flex align-items-center justify-content-end mt-2 mb-2">
+
+    {{-- Wyświetlanie social na strone głownej--}}
+    @if(isset($strona_glowna))
+
+        {{-- facebook SDK --}}
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v11.0"
+                nonce="djYMT9ht"></script>
+        {{-- Koniec facebook SDK --}}
+        {{-- Twitter js --}}
+        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+
+        <div class="d-flex mt-4 mb-4 me-5">
+            {{-- Twitter share button--}}
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet"
+               data-size="large"
+               data-lang="pl"
+               data-text="Poradnik Dyskutanta pomaga w znalezieniu argumantów podczas internetowej dyskusji!"
+               data-url="{{Request::url()}}"
+            >
+                Tweet
+            </a>
+            {{-- Facebook share button--}}
+            <div class="fb-share-button ms-2"
+                 data-href="{{Request::url()}}"
+                 data-layout="button"
+                 size="large">
+            </div>
+
+            {{-- Facebook like button--}}
+            <div class="fb-like ms-2" data-href="{{Request::url()}}"
+                 data-width="" data-layout="standard" data-action="like"
+                 data-size="large" data-share="false"></div>
+        </div>
+
+
+
+        @endif
+
+
+    {{-- w zależności od zalgowania pojawiją się odpowiednie przyciski--}}
+    @auth
+        <div class="fw-bold text-primary fs-6 me-3">{{ Auth::user()->name }}</div>
+        <a href="#wylogowanie" class="btn btn-outline-info me-2" role="button" aria-pressed="true">
+            <i class="bi bi-person-dash-fill"></i> Wyloguj</a>
+
+        <a href="{{route('ustawieniaDane')}}" class="btn btn-outline-warning me-2" role="button" aria-pressed="true">
+            <i class="bi bi-person-lines-fill"></i> Moje konto</a>
+
+
+    @else
+        <a href="{{route('register')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
+            <i class="bi bi-person-plus-fill"></i> Rejestracja</a>
+        <a href="{{route('login')}}" class="btn btn-outline-success me-2" role="button" aria-pressed="true">
+            <i class="bi bi-person-check-fill"></i> Logowanie</a>
+
+    @endauth
+
+</div>
+
 <div class="container mt-2 mb-2">
 
     @if(isset($zagadnienia_karuzela) && $zagadnienia_karuzela->count()>1)
@@ -117,27 +190,7 @@
         @endif
 </div>
 
-<div class="container-fluid d-flex align-items-center justify-content-end mt-2 mb-2">
 
-    {{-- w zależności od zalgowania pojawiją się odpowiednie przyciski--}}
-    @auth
-        <div class="fw-bold text-primary fs-6 me-3">{{ Auth::user()->name }}</div>
-     <a href="#wylogowanie" class="btn btn-outline-info me-2" role="button" aria-pressed="true">
-        <i class="bi bi-person-dash-fill"></i> Wyloguj</a>
-
-        <a href="{{route('ustawieniaDane')}}" class="btn btn-outline-warning me-2" role="button" aria-pressed="true">
-        <i class="bi bi-person-lines-fill"></i> Moje konto</a>
-
-
-        @else
-    <a href="{{route('register')}}" class="btn btn-outline-primary me-2" role="button" aria-pressed="true">
-        <i class="bi bi-person-plus-fill"></i> Rejestracja</a>
-    <a href="{{route('login')}}" class="btn btn-outline-success me-2" role="button" aria-pressed="true">
-        <i class="bi bi-person-check-fill"></i> Logowanie</a>
-
-    @endauth
-
-</div>
 
 <div class="container justify-content-center" id="zawartoscGlowna">
 
@@ -186,9 +239,23 @@
         <a class="link-dark" href="{{route('dzialyWszystkie')}}"  style="color: white">Wszystkie działy</a>
 
     </div>
+    @php
+       $motto=rand(1, 2);
+    @endphp
+    <div class="offset-2 col-9 mt-2" style="color: white"><i>
+            @if($motto==1)
+                {{--{{$motto}}--}}
+            Zawsze bądźcie gotowi udzielić odpowiedzi tym, którzy pragnęliby wyjaśnień co do ożywiającej was nadziei
+        @elseif($motto==2)
+               {{-- {{$motto}}--}}
+                Bądźcie zawsze gotowi do obrony wobec każdego, kto domaga się od was uzasadnienia tej nadziei, która w was jest
+       @endif
+
+        </i>(1P 3,15)</div>
+
+    @auth<div class="fs-6 kolorBialy">Wersja: 0.108</div>@endauth
 
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.107</div>@endauth
 </footer>
 
 

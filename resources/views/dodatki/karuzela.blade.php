@@ -18,11 +18,13 @@
 
 
         @foreach($zagadnienia_karuzela as $karuzela)
-            <div class="carousel-item @if ($loop->index==1) active @else  @endif">
-                <img src="{{$karuzela->Urlobrazek1}}" class="d-block w-100" alt="...">
+            <div class="carousel-item @if ($loop->index==1) active @else  @endif " style="max-height: 300px">
+                <img src="{{$karuzela->Urlobrazek1}}" class="d-block w-100" alt="..." style="object-fit: scale-down;">
+                {{--<img src="{{$karuzela->Urlobrazek1}}" class="d-block w-100" alt="...">--}}
+
                 <div class="carousel-caption d-none d-md-block">
-                    <a href="{{route('zagadnienieCale',$karuzela->slug )}}" class="text-white text-decoration-none"><h5 class="">{{$karuzela->zajawka_tytul}}</h5>
-                    <p>{{$karuzela->zajawka}}</p></a>
+                    <a href="{{route('zagadnienieCale',$karuzela->slug )}}" class="text-white text-decoration-none"><h5 class="tlo-karuzela p-1 rounded-3">{{$karuzela->zajawka_tytul}}</h5>
+                    <p class="tlo-karuzela p-1  rounded-3">{{$karuzela->zajawka}}</p></a>
                 </div>
             </div>
 

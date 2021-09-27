@@ -30,6 +30,8 @@ class _GlownyController extends Controller
 
     public function  start(){
 
+        // info, że mamy stronę główną
+        $strona_glowna='Tak';
         /*pobieranie tematów na stronę główną*/
         $hasla=Hasla::all();
         $zagadnienia=Zagadnienia::where('status', 'Aktywny')->get();
@@ -56,7 +58,7 @@ class _GlownyController extends Controller
         $infa=Info::orderBy('created_at', 'asc')->take(10)->get();
         $miejsca=Miejsca::orderBy('created_at', 'asc')->take(10)->get();
         $komunikaty=Komunikaty::orderBy('created_at', 'asc')->take(5)->get();
-        $zagadnienia_karuzela=Zagadnienia::where('zajawka_pokaz', 'Tak')->orderBy('zagadnienie', 'asc')->take(10)->get();
+        $zagadnienia_karuzela=Zagadnienia::where('zajawka_pokaz', 'Tak')->where('status','Aktywny')->orderBy('zagadnienie', 'asc')->take(10)->get();
 
         return view('tresc.glowna-start', [
             'hasla'=>$hasla,
@@ -67,6 +69,7 @@ class _GlownyController extends Controller
            'tagi'=>$tagi,
             'komunikaty'=>$komunikaty,
             'miejsca'=>$miejsca,
+            'strona_glowna'=>$strona_glowna,
             'infa'=>$infa,
             'zagadnienia_karuzela'=>$zagadnienia_karuzela
         ]);
