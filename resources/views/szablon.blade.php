@@ -231,7 +231,7 @@
 </div>
 {{--Koniec zawartości głownej--}}
 
-<footer class="tlo-nav mt-auto py-2 tlo-nav">
+<footer class="tlo-nav mt-auto py-2">
 
     <div class="col-12 text-center" style="color: white">&reg; PoradnikDyskutanta 2021 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
