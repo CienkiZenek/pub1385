@@ -42,6 +42,7 @@
         "psr-4": {
             "App\\": "app/"
         },
+        "files": ["app/Dodatki/helpers.php"],
         "classmap": [
             "database/seeds",
             "database/factories"

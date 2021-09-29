@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{ URL::asset('/css/bootstrap-css/bootstrap-utilities.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('/css/lightbox.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('/css/fonty.css')}}">
-    <link rel="stylesheet" href="{{ URL::asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{ URL::asset('/css/style.css?v='.config('pomocnik.wersja'))}}">
    {{-- <link rel="stylesheet" href="{{ URL::asset('/css/app.css')}}">--}}
 
 
@@ -253,7 +253,7 @@
 
         </i>(1P 3,15)</div>
 
-    @auth<div class="fs-6 kolorBialy">Wersja: 0.108</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: {{--0.108--}} {{ config('pomocnik.wersja') }}</div>@endauth
 
 
 </footer>

@@ -39,5 +39,5 @@
             @endif
     @endforeach
     </div>
-   {{-- @include('dodatki.paginacja')--}}
+   {{-- @include('Dodatki.paginacja')--}}
 @endsection

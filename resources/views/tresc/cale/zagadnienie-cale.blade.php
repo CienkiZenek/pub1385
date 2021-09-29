@@ -72,7 +72,7 @@
                    href="https://twitter.com/intent/tweet"
                    data-size="large"
                    data-lang="pl"
-                   data-text="{{Str::limit(strip_tags($zagadnienie->tresc), 2500)}}"
+                   data-text="{{Str::limit(strip_tags($zagadnienie->tresc), 2900)}}"
                    data-url="{{Request::url()}}"
                 >
                     Tweet
