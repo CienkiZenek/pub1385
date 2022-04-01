@@ -53,7 +53,8 @@
      duchy złe, które na zgubę dusz ludzkich po tym
       świecie krążą, mocą Bożą strąć do piekła. Amen.
 --}}
-@include('cookieConsent::index')
+{{--@include('cookieConsent::index')--}}
+<h1 style="font-size: 1px; margin: 0px; padding: 0; color: #0d6efd96; height: 1px">Poradnik dyskutant</h1>
 <nav class="navbar navbar-expand-lg navbar-light tlo-nav" >
     <div class="container-fluid">
         <a class="navbar-brand fs-3" href="/" style="color:#dc3545">
@@ -83,9 +84,9 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="{{route('memy')}}" style="color: #fff;">Memy</a>
                 </li>
-                <li class="nav-item ">
+                {{--<li class="nav-item ">
                     <a class="nav-link" href="{{route('wsparcie')}}" style="color: #fff;">Wsparcie</a>
-                </li>
+                </li>--}}
 
                 @auth
                     @if(Auth::user()->hasVerifiedEmail())
@@ -108,7 +109,7 @@
         </div>
     </div>
 </nav>
-
+<div class="container"><a href="https://www.facebook.com/PoradnikDyskutanta-109691331664728" target="_blank"><i class="bi bi-facebook"></i></a><a href="https://twitter.com/PoradnikDyskut" target="_blank"><i class="bi bi-twitter"></i></a><a href="https://www.linkedin.com/in/poradnik-dyskutanta-528833235/" target="_blank"><i class="bi bi-linkedin"></i></a> </div>
 
 <div class="container-fluid d-flex align-items-center justify-content-end mt-2 mb-2">
 
@@ -233,10 +234,10 @@
 
 <footer class="tlo-nav mt-auto py-2">
 
-    <div class="col-12 text-center" style="color: white">&reg; PoradnikDyskutanta 2021 </div>
+    <div class="col-12 text-center" style="color: white">&reg; PoradnikDyskutanta 2022 </div>
     <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
         <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
-        <a class="link-dark" href="{{route('dzialyWszystkie')}}"  style="color: white">Wszystkie działy</a>
+        <a class="link-dark" href="{{route('jakDyskutowac')}}"  style="color: white">Jak dyskutować?</a>
 
     </div>
     @php
@@ -253,7 +254,7 @@
 
         </i>(1P 3,15)</div>
 
-    @auth<div class="fs-6 kolorBialy">Wersja: {{--0.108--}} {{ config('pomocnik.wersja') }}</div>@endauth
+    @auth<div class="fs-6 kolorBialy">Wersja: {{ config('pomocnik.wersja') }}</div>@endauth
 
 
 </footer>
@@ -274,7 +275,7 @@
 @livewireScripts
 
 </body>
-<script src="{{ URL::asset('/js/jquery-3.5.1.min.js')}}"></script>
+<script src="{{ URL::asset('/js/jquery-3.6.0.min.js')}}"></script>
 {{--
 kłóci się z NAVbarem - menu się nie zwija...
 <script src="{{ URL::asset('/js/bootstrap-js/bootstrap.min.js')}}"></script>--}}

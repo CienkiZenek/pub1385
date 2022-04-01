@@ -23,7 +23,9 @@ class Zagadnienia_uwagiController extends Controller
     protected function validator($data){
         $walidated= Validator::make($data, [
             'naglowek'=>'required|min:30',
-            'tresc'=>'required|min:500'
+            'tresc'=>'required|min:500',
+            'do'=>'required',
+            'slug'=>'required'
 
         ])->validate();
         return $walidated;

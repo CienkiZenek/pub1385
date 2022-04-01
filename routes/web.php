@@ -20,6 +20,7 @@ Route::get('/komunikaty', 'KomunikatyController@index')->name('komunikaty');
 Route::get('/znalezione', 'ZnalezioneController@index')->name('znalezione');
 Route::get('/kontakt', '_GlownyController@kontakt')->name('kontakt');
 Route::get('/regulamin', '_GlownyController@regulamin')->name('regulamin');
+Route::get('/jakDyskutowac', '_GlownyController@jakDyskutowac')->name('jakDyskutowac');
 Route::get('/wsparcie', '_GlownyController@wsparcie')->name('wsparcie');
 Route::get('/przekazdnia', 'PrzekazdniaController@index')->name('przekazdnia');
 

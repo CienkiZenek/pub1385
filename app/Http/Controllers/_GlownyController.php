@@ -165,4 +165,9 @@ class _GlownyController extends Controller
 
         return view('tresc.podstrony.regulamin');
     }
+
+    public function jakDyskutowac(){
+
+        return view('tresc.podstrony.jakDyskutowac');
+    }
 }

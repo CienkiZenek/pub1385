@@ -11,12 +11,16 @@
 @foreach($Wyniki as $mem)
 
 
-
+<div class="row ">
+    <div class="offset-3">
     <a href="{{route('memCale', $mem->id)}}">
+
+
         <img src="{{$mem->Urlmem}}" class="img-thumbnail" width="400px" alt="...">
 
     </a>
-
+    </div>
+</div>
     {{-- <a href="{{route('memCale', $mem->id)}}" class="link-dark text-decoration-none">{{ $mem->tytul }}</a>--}}
 
 

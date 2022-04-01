@@ -33,16 +33,15 @@
 
         </ol>
     </nav>
-    <div class="row">
-
+    <div class="row ">
+<div class="offset-2">
         <figure class="figure">
             <figcaption class="figure-caption">{{ $mem->tytul }}</figcaption>
             <img src="{{$mem->Urlmem}}" id="memObrazek" class="figure-img img-fluid rounded kopiowanieObrazka" alt="...">
-            {{$mem->Urlmem}}
+
         </figure>
         {{--<div>Ostatnia modyfikacja: {{$mem->created_at->format('Y-m-d H:i:s')}}</div>--}}
 
-    </div>
 
 <div class="d-flex mt-2 mb-5">
     {{-- Twitter share button--}}
@@ -81,6 +80,7 @@
 {{--<p>Can write ? <span id="can-write"></span></p>--}}
 {{--<button id="copy-img-btn">Copy image to clipboard</button>--}}
 
-
+</div>
+    </div>
     <script src="{{ URL::asset('/js/obrazekKopiowanie.js')}}"></script>
 @endsection
