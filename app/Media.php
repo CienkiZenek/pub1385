@@ -8,7 +8,7 @@ class Media extends Model
 {
     use HasFactory;
     protected $table = 'media';
- /*   protected $fillable =['nazwa', 'link', 'dodal_user', 'logo'];*/
+ protected $fillable =['nazwa', 'link', 'dodal_user', 'logo'];
 
 
     public function znalezione(){

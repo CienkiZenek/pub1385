@@ -246,7 +246,8 @@ $tytulPropozycji=$propozycjaTematu->tytul;
 
         $uwaga = Propozycje_uwagi::findOrFail($id);
 
-        return view('tresc.userzyAktywnosc.uwagaPodglad', ['uwaga'=>$uwaga]);
+       // return view('tresc.userzyAktywnosc.uwagaPodglad', ['uwaga'=>$uwaga]);
+        return $uwaga;
 
     }
 

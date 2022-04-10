@@ -33,9 +33,9 @@
                     {{ Str::limit($uwaga->naglowek, 30) }} (do tematu) </a>
             </div>
             @else
-                <div class="col-10 size20"> <a href="{{ route('uwagaPodglad', $uwaga->id) }}" class="list-group-item list-group-item-action">
+                {{--<div class="col-10 size20"> <a href="{{ route('uwagaPodglad', $uwaga->id) }}" class="list-group-item list-group-item-action">
                         {{ Str::limit($uwaga->naglowek, 30) }} (do propozycji tematu) </a>
-                </div>
+                </div>--}}
             @endif
     @endforeach
     </div>

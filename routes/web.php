@@ -21,8 +21,9 @@ Route::get('/znalezione', 'ZnalezioneController@index')->name('znalezione');
 Route::get('/kontakt', '_GlownyController@kontakt')->name('kontakt');
 Route::get('/regulamin', '_GlownyController@regulamin')->name('regulamin');
 Route::get('/jakDyskutowac', '_GlownyController@jakDyskutowac')->name('jakDyskutowac');
+Route::get('/zasady', '_GlownyController@zasady')->name('zasady')->middleware('UserAktywny');
 Route::get('/wsparcie', '_GlownyController@wsparcie')->name('wsparcie');
-Route::get('/przekazdnia', 'PrzekazdniaController@index')->name('przekazdnia');
+Route::get('/przekazdnia', 'PrzekazdniaController@index')->name('przekazdnia')->middleware('UserAktywny');
 
 // Koniec menu główne
 

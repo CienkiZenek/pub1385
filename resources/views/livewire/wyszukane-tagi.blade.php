@@ -7,7 +7,7 @@
 
             <div class="">
 
-                <a href="{{ route('tagCale', $tag['id']) }}" class="link-dark text-decoration-none"  target="_blank">{{ Str::limit($tag->nazwa, 30)  }}</a>
+                <a href="{{ route('tagCale', $tag['slug']) }}" class="link-dark text-decoration-none"  target="_blank">{{ Str::limit($tag->nazwa, 30)  }}</a>
 
             </div>
 

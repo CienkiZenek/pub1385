@@ -170,4 +170,8 @@ class _GlownyController extends Controller
 
         return view('tresc.podstrony.jakDyskutowac');
     }
+    public function zasady(){
+
+        return view('tresc.podstrony.zasady');
+    }
 }

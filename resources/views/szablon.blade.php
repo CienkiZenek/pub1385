@@ -239,6 +239,12 @@
         <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
         <a class="link-dark" href="{{route('jakDyskutowac')}}"  style="color: white">Jak dyskutować?</a>
 
+        @auth
+            @if(Auth::user()->hasVerifiedEmail())
+                <a class="link-dark" href="{{route('zasady')}}"  style="color: white">Zasady dla zarejestrowanych użytkowników</a>
+            @endif
+        @endauth
+
     </div>
     @php
        $motto=rand(1, 2);
