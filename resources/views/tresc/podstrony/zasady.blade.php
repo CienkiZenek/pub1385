@@ -18,12 +18,12 @@
 </div>
 <div class="row mt-3">
     <div class="offset-1 col-12">
-        - mogą dodawać miejsca do sprawdzenia dyskusji w internecie (będą opublikowane po pozytywnej weryfikacji Redakcji);
+        - mogą dodawać miejsca do sprawdzenia dyskusji w internecie;
     </div>
 </div>
 <div class="row mt-3">
     <div class="offset-1 col-12">
-        - dodawać linki do ciekawych publikacji (publikacja jw.);
+        - dodawać linki do ciekawych publikacji;
     </div>
 </div>
 <div class="row mt-3">

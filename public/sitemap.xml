@@ -4,56 +4,56 @@
         <loc>https://poradnikdyskutanta.pl</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>daily</changefreq>
-        <pririty>0.5</pririty>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://poradnikdyskutanta.pl/kontakt</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>yearly</changefreq>
-        <pririty>0.1</pririty>
+        <priority>0.1</priority>
     </url>
     <url>
         <loc>https://poradnikdyskutanta.pl/regulamin</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>yearly</changefreq>
-        <pririty>0.2</pririty>
+        <priority>0.2</priority>
     </url>
     <url>
         <loc>https://poradnikdyskutanta.pl/jakDyskutowac</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>yearly</changefreq>
-        <pririty>0.3</pririty>
+        <priority>0.3</priority>
     </url>
     <url>
-        <loc>https://poradnikdyskutanta.pl/memy</loc>
+        <loc>https://poradnikdyskutanta.pl/memyKomiksy</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>weekly</changefreq>
-        <pririty>0.5</pririty>
+        <priority>0.5</priority>
     </url>
     <url>
         <loc>https://poradnikdyskutanta.pl/tematy</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>weekly</changefreq>
-        <pririty>0.8</pririty>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://poradnikdyskutanta.pl/znalezione</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>daily</changefreq>
-        <pririty>0.9</pririty>
+        <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://poradnikdyskutanta.pl/komunikaty</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>monthly</changefreq>
-        <pririty>0.7</pririty>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://poradnikdyskutanta.pl/tagi</loc>
         <lastmod>2022-02-04</lastmod>
         <changefreq>monthly</changefreq>
-        <pririty>0.3</pririty>
+        <priority>0.3</priority>
     </url>
 
 </urlset>

@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32"   href="img/favicon-32x32.PNG">
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G7JJM3GW8"></script>
@@ -84,9 +86,9 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="{{route('memy')}}" style="color: #fff;">Memy</a>
                 </li>
-                {{--<li class="nav-item ">
+                <li class="nav-item ">
                     <a class="nav-link" href="{{route('wsparcie')}}" style="color: #fff;">Wsparcie</a>
-                </li>--}}
+                </li>
 
                 @auth
                     @if(Auth::user()->hasVerifiedEmail())
@@ -109,7 +111,11 @@
         </div>
     </div>
 </nav>
-<div class="container"><a href="https://www.facebook.com/PoradnikDyskutanta-109691331664728" target="_blank"><i class="bi bi-facebook"></i></a><a href="https://twitter.com/PoradnikDyskut" target="_blank"><i class="bi bi-twitter"></i></a><a href="https://www.linkedin.com/in/poradnik-dyskutanta-528833235/" target="_blank"><i class="bi bi-linkedin"></i></a> </div>
+<div class="container">
+    <a href="https://www.facebook.com/PoradnikDyskutanta-109691331664728" target="_blank"><i class="bi bi-facebook fs-4 me-2"></i></a>
+    <a href="https://twitter.com/PoradnikDyskut" target="_blank"><i class="bi bi-twitter fs-4 me-2"></i></a>
+    <a href="https://www.linkedin.com/in/poradnik-dyskutanta-528833235/" target="_blank"><i class="bi bi-linkedin fs-4"></i></a>
+</div>
 
 <div class="container-fluid d-flex align-items-center justify-content-end mt-2 mb-2">
 
@@ -235,16 +241,18 @@
 <footer class="tlo-nav mt-auto py-2">
 
     <div class="col-12 text-center" style="color: white">&reg; PoradnikDyskutanta 2022 </div>
-    <div class="col-12 text-center " ><a class="link-white" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
-        <a class="link-dark" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
-        <a class="link-dark" href="{{route('jakDyskutowac')}}"  style="color: white">Jak dyskutować?</a>
+    <div class="col-12 text-center " ><a class="link-white me-2" href="{{route('kontakt')}}"  style="color: white">Kontakt</a>
+        <a class="link-dark me-2" href="{{route('regulamin')}}"  style="color: white">Regulamin</a>
+        <a class="link-dark me-2" href="{{route('jakDyskutowac')}}"  style="color: white">Jak dyskutować?</a>
 
         @auth
             @if(Auth::user()->hasVerifiedEmail())
-                <a class="link-dark" href="{{route('zasady')}}"  style="color: white">Zasady dla zarejestrowanych użytkowników</a>
+                <a class="link-dark" href="{{route('zasady')}}"  style="color: white">Zasady</a>
             @endif
-        @endauth
+        @endauth</div>
 
+    <div class="col-12 text-center " >
+        <a class="link-dark" href="https://slownik1894.poradnikdyskutanta.pl/"  style="color: white" target="_blank">Słownik Apologetyczny 1894</a>
     </div>
     @php
        $motto=rand(1, 2);

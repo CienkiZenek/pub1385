@@ -14,7 +14,7 @@ Route::get('/zagadnienia', 'ZagadnieniaController@index')->name('zagadnienia');
 Route::get('/zagadnienia_uwagi', 'Zagadnienia_uwagiController@index')->name('zagadnienia_uwagi');
 Route::get('/miejsca', 'MiejscaController@index')->name('miejsca')->middleware('UserAktywny');
 Route::get('/tagi', 'TagiController@index')->name('tagi');
-Route::get('/memKomiksy', 'MemyController@index')->name('memy');
+Route::get('/memyKomiksy', 'MemyController@index')->name('memy');
 Route::get('/info', 'InfoController@index')->name('info')->middleware('UserAktywny');
 Route::get('/komunikaty', 'KomunikatyController@index')->name('komunikaty');
 Route::get('/znalezione', 'ZnalezioneController@index')->name('znalezione');

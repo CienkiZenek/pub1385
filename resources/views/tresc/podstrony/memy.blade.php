@@ -12,11 +12,12 @@
 
 
 <div class="row ">
-    <div class="offset-3">
+    <div class="col-md-3 col-sm-1"></div>
+    <div class="col-8 mb-5">
     <a href="{{route('memCale', $mem->id)}}">
 
 
-        <img src="{{$mem->Urlmem}}" class="img-thumbnail" width="400px" alt="...">
+        <img src="{{$mem->Urlmem}}" class="img-thumbnail border-5" width="400px" alt="...">
 
     </a>
     </div>
@@ -34,26 +35,26 @@
 
 @endforeach
 
-<div class="list-group row mt-3">
-   {{-- @foreach($Wyniki as $mem)
+    {{-- <div class="list-group row mt-3">
+   {-- @foreach($Wyniki as $mem)
 
 
 
-        <img src="{{$mem->Urlmem}}" class="" width="30px" height="50px" alt="...">
+            <img src="{{$mem->Urlmem}}" class="" width="30px" height="50px" alt="...">
 
-           --}}{{-- <a href="{{route('memCale', $mem->id)}}" class="link-dark text-decoration-none">{{ $mem->tytul }}</a>--}}{{--
-
-
-
---}}{{--
-        <figure class="figure">
-            <img src="{{$mem->Urlmem}}" class="figure-img img-fluid rounded" alt="...">
-            <figcaption class="figure-caption">{{ $mem->tytul }}</figcaption>
-        </figure>--}}{{--
+               --}}{{-- <a href="{{route('memCale', $mem->id)}}" class="link-dark text-decoration-none">{{ $mem->tytul }}</a>--}}{{--
 
 
-    @endforeach--}}
-</div>
+
+    --}}{{--
+            <figure class="figure">
+                <img src="{{$mem->Urlmem}}" class="figure-img img-fluid rounded" alt="...">
+                <figcaption class="figure-caption">{{ $mem->tytul }}</figcaption>
+            </figure>--}}{{--
+
+
+        @endforeach
+</div>--}}
 @include('dodatki.paginacja')
 
 

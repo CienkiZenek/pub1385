@@ -2,9 +2,10 @@
 @section('title', 'PoradnikDyskutanta: Przekaz dnia')
 @section('tresc')
 
-<div>Przekaz dnia</div>
 
-
+<div class="col-lg-6 col-md-12 fs-5 mb-5">
+    Przekaz dnia
+</div>
 
 <div class="list-group row mt-3">
     @foreach($Wyniki as $przekaz)
