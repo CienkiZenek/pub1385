@@ -53,13 +53,25 @@
 </div>
 </div>
     <div class="row">
+        <div  class="row " style="min-height: 40px">
+            <div id="twKontener" class="col-lg-3 col-md-4 col-sm-5 alert-primary border border-primary fw-bolder">Opublikuj zaznaczony tekst: </div>
+            <div id="twZaznacz" class="col-lg-3 col-md-4 col-sm-5 "></div>
+        </div>
         <div class=" col-md-8 col-sm-12" >
            <div id="tresc" class="fs-6 " style="text-indent: 1em">
+
+               @if(Str::length($zagadnienie->w_skrocie)>5)
+                   <p class="akapit fw-bold">
+                       {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->w_skrocie)!!}
+                   </p>
+               @endif
+
 
                <p class="akapit">
                {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->tresc)!!}
 
                </p>
+
                {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
                <div id="dodaj" style="color: white; font-size: 1px">({{Request::url()}})
                </div>
@@ -88,6 +100,10 @@
             <div class="fb-like ms-2" data-href="{{Request::url()}}"
                  data-width="" data-layout="standard" data-action="like"
                  data-size="large" data-share="false"></div>
+
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
+                <script type="IN/Share" data-url="{{Request::url()}}"></script>
+
             </div>
 
 
@@ -104,7 +120,8 @@
             @include('dodatki.progresBar', ['tresc'=>'zagadnienia', 'procent'=>$zagadnienie->procent_tresci])
 
             @if(Str::length($zagadnienie->linkSlownikPdf)>2)
-                <div class="mt-3 fs-6"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
+                <i class="bi bi-filetype-pdf" style="font-size: x-large; color:dodgerblue;"></i>
+                <div class="mt-3 fs-6"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
             @endif
             @if($zagadnienie->bibliografia->count()>0)
             <div class="mt-3 fs-6">Bibliografia</div>
@@ -192,7 +209,7 @@
         @if(Str::length($zagadnienie->linkSlownikPdf)>4)
         <div class="mb-2 mt-2 col-md-8 col-sm-12">
                 <div class=" fs-6">
-                    Hasło w słowniku apologetycznym z 1894:</br>
+                    Hasło w słowniku apologetycznym z 1894:<br>
                     <a href="http://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$zagadnienie->linkSlownikPdf}}" target="_blank">{{$zagadnienie->trescLinku}}</a>
                 </div>
         </div>
@@ -200,7 +217,7 @@
     </div>
 
 
-    <div class="mb-5 fs-6">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
+    <div class="mb-5 mt-3 fs-6 alert alert-primary">Ostatnia modyfikacja: {{$zagadnienie->updated_at->format('Y-m-d')}}</div>
 
 @if(Str::length($zagadnienie->rozszerz)>10)
 <a href="{{route('zagadnienieRozszerzenie', $zagadnienie->slug )}}" class="btn btn-primary mb-3" role="button" aria-pressed="true">Wersja rozszerzona tego zagadnienia</a>
@@ -335,4 +352,5 @@
 
 
     <script src="{{ URL::asset('/js/kopiowanie.js')}}"></script>
+    <script src="{{ URL::asset('/js/kopiowanieFF.js')}}"></script>
 @endsection

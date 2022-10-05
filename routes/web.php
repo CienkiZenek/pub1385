@@ -23,7 +23,7 @@ Route::get('/regulamin', '_GlownyController@regulamin')->name('regulamin');
 Route::get('/jakDyskutowac', '_GlownyController@jakDyskutowac')->name('jakDyskutowac');
 Route::get('/zasady', '_GlownyController@zasady')->name('zasady')->middleware('UserAktywny');
 Route::get('/wsparcie', '_GlownyController@wsparcie')->name('wsparcie');
-Route::get('/przekazdnia', 'PrzekazdniaController@index')->name('przekazdnia')->middleware('UserAktywny');
+Route::get('/przekazdnia', 'PrzekazdniaController@index')->name('przekazdnia');
 
 // Koniec menu główne
 

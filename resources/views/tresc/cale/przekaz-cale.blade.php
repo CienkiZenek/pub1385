@@ -19,32 +19,46 @@
     <div class="row text-center fs-4">
 
 
-        <div class="col-12 ">{{$przekaz->tytul}}</div>
+        <div class="col-12 fs-3">{{$przekaz->tytul}}</div>
 
     </div>
     <div class="row mb-2">
 
+<div class="col-lg-8 col-md-6 col-sm-12">
+        <div class="mt-2 mb-2 fs-5">{!!  $przekaz->naglowek!!}</div>
+        <div class="mb-2">
+            <p class="akapit">
+                {!! Str::replace("\n","</p><p class='akapit'>",$przekaz->tresc)!!}
 
-        <div class="mt-2 mb-2">{{$przekaz->naglowek}}</div>
-        <div class="mb-2">{{$przekaz->tresc}}</div>
+            </p>
+            {{--{{$przekaz->tresc}}--}}
 
+        </div>
     </div>
-    <div class="row">
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
 
         @if(Str::length($przekaz->ramka1)>2)
-        <div class="col-md-5 col-sm-12 tlo-szare3 rounded-1 p-1 border border-secondary">{{$przekaz->ramka1}}</div>
+        <div class=" tlo-szare3 rounded-1 p-1 border border-secondary">{{$przekaz->ramka1}}</div>
         @endif
             @if(Str::length($przekaz->ramka2)>2)
-        <div class="col-md-5 col-sm-12 tlo-szare3 ms-3 p-1 border border-secondary">{{$przekaz->ramka2}}</div>
+        <div class="tlo-szare3 rounded-1 p-1 border border-secondary mt-3">{{$przekaz->ramka2}}</div>
             @endif
 
     </div>
-
+    </div>
     <div class="row mt-3">
 
 
-        <div class="col-12">{{$przekaz->user->name}}</div>
+        <div class="col-12">{{$przekaz->dodal_user_nazwa}}</div>
 
 
     </div>
+    <div class="row mt-3">
+
+        <div class="col-12"><a href="{{$przekaz->link}}" target="_blank" class="link-primary">{{$przekaz->link_tresc}}</a></div>
+
+
+    </div>
+
 @endsection

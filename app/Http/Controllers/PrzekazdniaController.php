@@ -9,14 +9,14 @@ class PrzekazdniaController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        /*$this->middleware('auth');
         $this->middleware('signed')->only('verify');
-        $this->middleware('UserAktywny');
+        $this->middleware('UserAktywny');*/
     }
 
     public function index(){
 
-        $przekazy=Przekazdnia::orderBy('created_at', 'asc')->paginate(10);
+        $przekazy=Przekazdnia::where('status', 'Opublikowany')->orderBy('created_at', 'asc')->paginate(10);
         return view('tresc.podstrony.przekazdnia', ['Wyniki'=>$przekazy]);
     }
     public function przekazCale($id){

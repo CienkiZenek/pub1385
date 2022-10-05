@@ -39,26 +39,34 @@
             <li class="breadcrumb-item active" aria-current="page">{{$haslo -> haslo}}</li>
         </ol>
     </nav>
-    <div class="row">
+    <div class="row ">
 
         <div class="fs-4 mb-3">{{ $haslo -> haslo}}</div>
 
+        <div  class="row " style="min-height: 40px">
+            <div id="twKontener" class="col-lg-3 col-md-4 col-sm-5 alert-primary border border-primary fw-bolder">Opublikuj zaznaczony tekst: </div>
+            <div id="twZaznacz" class="col-lg-3 col-md-4 col-sm-5 "></div>
+        </div>
+
         {{-- Twitowanie tylko zaznaczonego fragmentu - button twittera wszystko przebija,
          a display:none uniemożliwia załodwanie widgetu...  --}}
-        {{--<div id="tw_zazn" class="fs-6 mb-2 align-text-top" style="opacity:0; ">Opublikuj zazanczony fragment:
-            <a class="twitter-share-button"
+<!--        <div id="tw_zazn" class="fs-6 mb-2 align-text-top" >Opublikuj zazanczony fragment:
+<a class="twitter-share-button" id="tw2"
                href="https://twitter.com/intent/tweet"
                data-size="large"
                data-lang="pl"
                data-text=""
+               data-hashtags="tresc"
                data-url="{{Request::url()}}"
             >
                 Tweet
             </a>
-        </div>--}}
 
 
-        <div id="tresc" class="mb-2 fs-6 col-lg-9 col-md-12" style="text-indent: 1em">
+        </div>-->
+
+
+        <div id="tresc" class="mb-2 fs-6 col-lg-9 col-md-12 " style="text-indent: 1em">
             <p class="akapit">
             {!! Str::replace("\n","</p><p class='akapit'>",$haslo -> tresc) !!}
 
@@ -67,7 +75,7 @@
             <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
         </div>
 
-
+{{--  data-text="{{Str::limit(strip_tags($haslo->tresc), 2900)}}" --}}
         <div class="d-flex mt-4 mb-4">
             {{-- Twitter share button--}}
             <a class="twitter-share-button"
@@ -90,6 +98,10 @@
             <div class="fb-like ms-2" data-href="{{Request::url()}}"
                  data-width="" data-layout="standard" data-action="like"
                  data-size="large" data-share="false"></div>
+
+            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
+            <script type="IN/Share" data-url="{{Request::url()}}"></script>
+
         </div>
 
 
@@ -113,7 +125,9 @@
                 @foreach($haslo->zagadnienia as $zagadnienie)
                     <div class="ms-2 mt-2 fs-6">
 
-                        <a href="{{ route('zagadnienieCale', $zagadnienie->slug) }}" class="link-dark">{{$zagadnienie->zagadnienie}}
+                        <a href="{{ route('zagadnienieCale', $zagadnienie->slug) }}" class="link-primary" data-bs-toggle="tooltip" data-bs-html="true" title="{!! Str::limit($zagadnienie->tresc, 80)  !!}">
+
+                            {{$zagadnienie->zagadnienie}}
                         </a>
 
                     </div>
@@ -125,7 +139,9 @@
         @if(Str::length($haslo->linkSlownikPdf)>2)
 
 
-        <div class="mt-3  fs-6"><a href="https://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$haslo ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
+        <div class="mt-3  fs-6">
+            <i class="bi bi-filetype-pdf" style="font-size: x-large; color:dodgerblue;"></i>
+            <a href="https://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$haslo ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
         @endif
 
 
@@ -146,16 +162,11 @@
         @if($haslo->linki->count()>0)
         <div class="mt-3 fs-6">Linki:</div>
         <div>
-
             @foreach($haslo->linki as $link)
                 <div class="ms-2 mt-2 fs-6">
-
                     <a href="{{$link->link}}" target="_blank" class="link-dark">{{$link->tresc}}</a>
-
                 </div>
-
             @endforeach
-
         </div>
         @endif
         @if($haslo->pliki->count()>0)
@@ -165,7 +176,6 @@
                 <div class="ms-2 mt-2 fs-6">
 
                     <a href=" {{$plik->urlplik}}" target="_blank" class="link-dark">{{$plik->plik_nazwa}}</a>
-
 
                 </div>
 
@@ -184,33 +194,10 @@
     </div>
         @endif
 
-
     </div>
 
 
-
-
-
-
-    {{--@if($haslo->zagadnienia->count()>0)
-    <div class="row mt-3 fs-6">
-        <div>
-            Zagadnienia wchodzące w skład tego hasła:
-        </div>
-
-        @foreach($haslo->zagadnienia as $zagadnienie)
-            <div class="ms-2 mt-2 fs-6">
-
-                <a href="{{ route('zagadnienieCale', $zagadnienie->slug) }}" class="link-dark">{{$zagadnienie->zagadnienie}}
-                </a>
-
-            </div>
-
-        @endforeach
-    </div>
-@endif--}}
-
-<div class="mt-3 fs-6">Ostatnia modyfikacja: {{$haslo->created_at->format('Y-m-d')}}</div>
+<div class="mt-3 fs-6">Ostatnia modyfikacja: {{$haslo->updated_at->format('Y-m-d')}}</div>
 
 
     @auth
@@ -276,4 +263,5 @@
         @endif
     @endauth
     <script src="{{ URL::asset('/js/kopiowanie.js')}}"></script>
+    <script src="{{ URL::asset('/js/kopiowanieFF.js')}}"></script>
 @endsection

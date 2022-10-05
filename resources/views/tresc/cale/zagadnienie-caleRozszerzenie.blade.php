@@ -51,9 +51,25 @@
     {{ $zagadnienie->zagadnienie}} (Wersja zozszerzona)
 </div>
 </div>
-    <div class="row">
+    <div  class="row " style="min-height: 40px">
+        <div id="twKontener" class="col-lg-3 col-md-4 col-sm-5 alert-primary border border-primary fw-bolder">Opublikuj zaznaczony tekst: </div>
+        <div id="twZaznacz" class="col-lg-3 col-md-4 col-sm-5 "></div>
+    </div>
         <div class="mb-2 col-md-8 col-sm-12" >
-           <div id="tresc" class="fs-6" style="text-indent: 1em"> {!! $zagadnienie->rozszerz!!}
+           <div id="tresc" class="fs-6 " style="text-indent: 1em">
+
+               @if(Str::length($zagadnienie->w_skrocie)>5)
+                   <p class="fw-bold">W skrócie:</p>
+                   <p class="akapit fw-bold">
+                       {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->w_skrocie)!!}
+                   </p>
+               @endif
+
+               <p class="akapit">
+                   {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->rozszerz)!!}
+
+               </p>
+               {{--{!! $zagadnienie->rozszerz!!}--}}
                {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
 
@@ -82,6 +98,11 @@
                  data-width="" data-layout="standard" data-action="like"
                  data-size="large" data-share="false"></div>
 
+
+                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
+                <script type="IN/Share" data-url="{{Request::url()}}"></script>
+
+
             </div>
 
 
@@ -99,14 +120,17 @@
 
 
             @if(Str::length($zagadnienie->linkSlownikPdf)>2)
-                <div class="mt-3 fs-6"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894 (pdf)</a></div>
+                <div class="mt-3 fs-6">
+                    <i class="bi bi-filetype-pdf" style="font-size: x-large; color:dodgerblue;"></i>
+                    <a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
             @endif
             @if($zagadnienie->bibliografia->count()>0)
             <div class="mt-3 fs-6">Bibliografia</div>
             <div class="">
 
                 @foreach($zagadnienie->bibliografia as $bibl)
-                    <div class="ms-2 mt-2 fs-6">
+                    <div class="ms-2 mt-2 fs-6" style="color: #0d6efd ">
+                        <i class="bi bi-book" style="font-size: x-large; color:dodgerblue;"></i>
 {{$bibl->tresc}}
                     </div>
                 @endforeach
@@ -114,11 +138,11 @@
             @endif
 
             @if($zagadnienie->linki->count()>0)
-            <div class="mt-3 fs-6">Linki</div>
+            <div class="mt-3 fs-6 ">Linki</div>
             <div>
                 @foreach($zagadnienie->linki as $link)
                     <div class="ms-2 mt-2 fs-6">
-                        <a href="{{$link->link}}" target="_blank" class="link-dark">{{$link->tresc}}</a>
+                        <i class="bi bi-link-45deg" style="font-size: x-large; color:dodgerblue;"></i><a href="{{$link->link}}" target="_blank" class="link-primary">{{$link->tresc}}</a>
                     </div>
                 @endforeach
             </div>
@@ -130,7 +154,7 @@
             <div>
                 @foreach($zagadnienie->pliki as $plik)
                     <div class="ms-2 mt-2 fs-6">
-                        <a href=" {{$plik->urlplik}}" target="_blank" class="link-dark">{{$plik->plik_nazwa}}</a>
+                        <i class="bi bi-file-earmark-arrow-down" style="font-size: x-large; color:dodgerblue;"></i> <a href=" {{$plik->urlplik}}" target="_blank" class="link-primary">{{$plik->plik_nazwa}}</a>
                     </div>
                 @endforeach
             </div>
@@ -142,7 +166,7 @@
 
                 @foreach($zagadnienie->tagi as $tag)
                     <div class="ms-2 mt-2 fs-6">
-                        <a href="{{ route('tagCale', $tag['id']) }}" class="link-dark">{{$tag->nazwa}}</a>
+                        <i class="bi bi-arrow-left-right" style="font-size: x-large; color:dodgerblue;"></i><a href="{{ route('tagCale', $tag['id']) }}" class="link-primary">{{$tag->nazwa}}</a>
                     </div>
                 @endforeach
 
@@ -181,22 +205,22 @@
 
         </div>
 
-    </div>
 
-            <div class="row">
+
+<!--            <div class="row">
             @if(Str::length($zagadnienie->linkSlownikPdf)>4)
                 <div class="mb-2 mt-2 col-md-8 col-sm-12">
                     <div class=" fs-6">
-                        Hasło w słowniku apologetycznym z 1894:</br>
+                        Hasło w słowniku apologetycznym z 1894:<br>
                         <a href="http://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$zagadnienie->linkSlownikPdf}}" target="_blank">{{$zagadnienie->trescLinku}}</a>
                     </div>
                 </div>
             @endif
-        </div>
+        </div>-->
 
 
 
-    <div class="mb-3 fs-6">Ostatnia modyfikacja: {{$zagadnienie->created_at->format('Y-m-d')}}</div>
+    <div class=" col-4 mb-5 mt-3 fs-6 alert alert-primary">Ostatnia modyfikacja: {{$zagadnienie->updated_at->format('Y-m-d')}}</div>
 
 <a href="{{route('zagadnienieCale', $zagadnienie->slug )}}" class="btn btn-primary mb-3" role="button" aria-pressed="true">Wersja podstawowa</a>
 
@@ -265,7 +289,7 @@
         @foreach($zagadnienie->uwagi as $uwaga)
             <div class="ms-2 mt-2 fs-6">
 
-                <a href="{{ route('uwagaTematPodglad', $uwaga->id) }}" class="link-dark">{{Str::limit($uwaga->naglowek, 50) }}
+                <i class="bi bi-arrow-90deg-right" style="font-size: x-large; color:dodgerblue;"></i><a href="{{ route('uwagaTematPodglad', $uwaga->id) }}" class="link-primary">{{Str::limit($uwaga->naglowek, 50) }}
                 </a>
 
             </div>
@@ -326,4 +350,5 @@
 
 
     <script src="{{ URL::asset('/js/kopiowanie.js')}}"></script>
+    <script src="{{ URL::asset('/js/kopiowanieFF.js')}}"></script>
 @endsection

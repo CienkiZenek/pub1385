@@ -37,7 +37,7 @@
 <div class="offset-2">
         <figure class="figure">
             <figcaption class="figure-caption">{{ $mem->tytul }}</figcaption>
-            <img src="{{$mem->Urlmem}}" id="memObrazek" class="figure-img img-fluid rounded kopiowanieObrazka" alt="...">
+            <img src="{{$mem->Urlmem}}" id="memObrazek" class="figure-img img-fluid rounded kopiowanieObrazka" title="{{ $mem->tytul }}" alt="{{ $mem->tytul }}">
 
         </figure>
         {{--<div>Ostatnia modyfikacja: {{$mem->created_at->format('Y-m-d H:i:s')}}</div>--}}
