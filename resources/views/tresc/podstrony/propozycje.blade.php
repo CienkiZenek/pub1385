@@ -4,11 +4,13 @@
 
 
 
-<div class="row mt-4 mb-5">
+
+<div class="row mt-4 mb-5 border-bottom">
 
     <div class="col-lg-6 col-md-12 fs-5 ">
-        Propozycje tematów zgłoszone przez użytkowników
+        <h4 class="pb-3 ">Propozycje tematów zgłoszone przez użytkowników</h4>
     </div>
+
     <div class="col-lg-6 col-md-12">
 
         @auth
@@ -19,9 +21,13 @@
             @endif
 
         @endauth
-
     </div>
 </div>
+
+
+
+
+
 
 <div class="list-group row mt-3">
     @foreach($Wyniki as $propozycja)

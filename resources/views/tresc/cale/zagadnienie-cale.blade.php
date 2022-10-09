@@ -39,7 +39,7 @@
 
 
 
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="tlo-nav" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb fs-6 mb-4">
             <li class="breadcrumb-item"><a href="{{route('dzial', $zagadnienie->dzialy->slug)}}">{{$zagadnienie -> dzialy->dzial}}</a></li>
             <li class="breadcrumb-item"><a href="{{route('kategoria', $zagadnienie->kategorie->slug)}}">{{$zagadnienie ->kategorie->kategoria}}</a></li>
@@ -52,21 +52,25 @@
     {{ $zagadnienie->zagadnienie}}
 </div>
 </div>
+    @include('komponenty.opublikujZaznaczone')
     <div class="row">
-        <div  class="row " style="min-height: 40px">
-            <div id="twKontener" class="col-lg-3 col-md-4 col-sm-5 alert-primary border border-primary fw-bolder">Opublikuj zaznaczony tekst: </div>
-            <div id="twZaznacz" class="col-lg-3 col-md-4 col-sm-5 "></div>
-        </div>
+
+
         <div class=" col-md-8 col-sm-12" >
            <div id="tresc" class="fs-6 " style="text-indent: 1em">
 
                @if(Str::length($zagadnienie->w_skrocie)>5)
+
+                   <p class=" tlo-nav">W skrócie:</p>
                    <p class="akapit fw-bold">
-                       {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->w_skrocie)!!}
+
+                       {!! Str::replace("\n","</p><p class='akapit fw-bold'>",$zagadnienie->w_skrocie)!!}
                    </p>
                @endif
 
-
+                   @if(Str::length($zagadnienie->w_skrocie)>5)
+                       <p class=" tlo-nav">Więcej:</p>
+                   @endif
                <p class="akapit">
                {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->tresc)!!}
 
@@ -121,7 +125,7 @@
 
             @if(Str::length($zagadnienie->linkSlownikPdf)>2)
                 <i class="bi bi-filetype-pdf" style="font-size: x-large; color:dodgerblue;"></i>
-                <div class="mt-3 fs-6"><a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
+                <div class="mt-3 fs-6"><a href="http://slownik1894.poradnikdyskutanta.pl/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
             @endif
             @if($zagadnienie->bibliografia->count()>0)
             <div class="mt-3 fs-6">Bibliografia</div>
@@ -164,7 +168,7 @@
 
                 @foreach($zagadnienie->tagi as $tag)
                     <div class="ms-2 mt-2 fs-6">
-                        <a href="{{ route('tagCale', $tag['id']) }}" class="link-dark">{{$tag->nazwa}}</a>
+                        <a href="{{ route('tagCale', $tag['slug']) }}" class="link-dark">{{$tag->nazwa}}</a>
                     </div>
                 @endforeach
 
@@ -224,65 +228,6 @@
 
 @endif
 
-    {{--<button class="btn btn-primary mt-5 mb-5" type="button" data-bs-toggle="collapse" data-bs-target="#rozszerzenie" aria-expanded="false" aria-controls="usuwanie">
-        Wersja rozszerzona
-    </button>--}}
-
-    {{--<div class="collapse" id="rozszerzenie">
-        <div class="row">
-
-
-            <div class="offset-2 col-8" id="rozszerzTresc">{{$zagadnienie->rozszerz}}
-                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
-            </div>
-
-
-            <div class="col-2">
-
-                <i class="bi bi-clipboard fs-3" onClick="kopiujCaleRozszerzenie()" id="rozszerzIkona" title="Skopiuj całą treść rozszerzenia do schowka"></i>
-
-            </div>
-        </div>
-
---}}{{-- Skrytp kopujacy treśc całego rozszerzenia! --}}{{--
-        <script>
-            var komunikat  = document.getElementById("komunikatKopiowanie");
-            function kopiujCaleRozszerzenie() {
-                var rozszerzTresc    = document.getElementById("rozszerzTresc");
-                komunikat.style.display = "block";
-
-                // console.log(rozszerzTresc);
-                let range = new Range();
-                range.selectNodeContents(rozszerzTresc);
-               // range.setStart(rozszerzTresc.firstChild, 0);
-               // range.setEnd(rozszerzTresc.firstChild, tresc.firstChild.length);
-                document.getSelection().removeAllRanges();
-                document.getSelection().addRange(range);
-
-                try {
-                    var ok = document.execCommand('copy');
-                    if (ok) komunikat.innerHTML = 'Skopiowano wersję rozszerzoną do schowka!';
-                    else    komunikat.innerHTML = 'Nieudało się skopiować!';
-                } catch (err) {
-                    komunikat.innerHTML = 'Twoja przeglądarka nie obsługuje funkcji kopiowania!';
-                }
-                //odznaczamy zaznaczenie
-                document.getSelection().removeAllRanges();
-                // czyszczenie komunikatu
-                setTimeout(wyczyscKomunikat, 10000);
-            }
-
-            function wyczyscKomunikat() {
-                komunikat.style.display = "none";
-                komunikat.innerHTML = '';
-
-            }
-
-        </script>
-    </div>
---}}
-
-
   @auth
       @if(Auth::user()->hasVerifiedEmail())
         @if($zagadnienie->uwagi->count()>0)
@@ -306,8 +251,8 @@
     <form action="{{route('uwagiZapisNowe')}}" method="POST">
     @csrf
         <input type="text" hidden name="do" value="zagadnienie">
-        <input type="text" hidden name="zagadnienie_id" value="{{$zagadnienie ->id}}">
-        <input type="text" hidden name="slug" value="{{$zagadnienie ->slug}}">
+        <input type="text" hidden name="zagadnienie_id" value="{{$zagadnienie->id}}">
+        <input type="text" hidden name="slug" value="{{$zagadnienie->slug}}">
         <div class="row mt-3">
             <div class="col-12">
                 <div class="input-group">

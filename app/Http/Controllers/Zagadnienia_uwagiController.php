@@ -25,7 +25,9 @@ class Zagadnienia_uwagiController extends Controller
             'naglowek'=>'required|min:30',
             'tresc'=>'required|min:500',
             'do'=>'required',
-            'slug'=>'required'
+            'slug'=>'required',
+            'haslo_id'=>'nullable',
+            'zagadnienie_id'=>'nullable'
 
         ])->validate();
         return $walidated;

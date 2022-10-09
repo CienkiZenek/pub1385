@@ -143,7 +143,7 @@
                            title="{{$znal->rodzaj}}. Dodał:  {{$znal->dodal_user_nazwa}}. {{$znal->komentarz}}"
 
 
-                        ><a href="{{$znal->link}}" class="link-dark text-decoration-none napis-kolor fs-5" target="_blank"
+                        ><a href="{{$znal->link}}" class="link-dark text-decoration-none napis-kolor fs-6" target="_blank"
 
                             >{{ Str::limit($znal->nazwa, 30) }}</a>
                             </p>

@@ -32,38 +32,19 @@
 
 
 
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+<nav class="tlo-nav" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb fs-6 mb-4">
             <li class="breadcrumb-item"><a href="{{route('dzial', $haslo->dzialy->slug)}}">{{$haslo -> dzialy->dzial}}</a></li>
             <li class="breadcrumb-item"><a href="{{route('kategoria', $haslo->kategorie->slug)}}">{{$haslo ->kategorie->kategoria}}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{$haslo -> haslo}}</li>
         </ol>
     </nav>
+
     <div class="row ">
 
         <div class="fs-4 mb-3">{{ $haslo -> haslo}}</div>
 
-        <div  class="row " style="min-height: 40px">
-            <div id="twKontener" class="col-lg-3 col-md-4 col-sm-5 alert-primary border border-primary fw-bolder">Opublikuj zaznaczony tekst: </div>
-            <div id="twZaznacz" class="col-lg-3 col-md-4 col-sm-5 "></div>
-        </div>
-
-        {{-- Twitowanie tylko zaznaczonego fragmentu - button twittera wszystko przebija,
-         a display:none uniemożliwia załodwanie widgetu...  --}}
-<!--        <div id="tw_zazn" class="fs-6 mb-2 align-text-top" >Opublikuj zazanczony fragment:
-<a class="twitter-share-button" id="tw2"
-               href="https://twitter.com/intent/tweet"
-               data-size="large"
-               data-lang="pl"
-               data-text=""
-               data-hashtags="tresc"
-               data-url="{{Request::url()}}"
-            >
-                Tweet
-            </a>
-
-
-        </div>-->
+        @include('komponenty.opublikujZaznaczone')
 
 
         <div id="tresc" class="mb-2 fs-6 col-lg-9 col-md-12 " style="text-indent: 1em">
@@ -221,8 +202,8 @@
             <form action="{{route('uwagiZapisNowe')}}" method="POST">
                 @csrf
                 <input type="text" hidden name="do" value="haslo">
-                <input type="text" hidden name="haslo_id" value="{{$haslo ->id}}">
-                <input type="text" hidden name="slug" value="{{$haslo ->slug}}">
+                <input type="text" hidden name="haslo_id" value="{{$haslo->id}}">
+                <input type="text" hidden name="slug" value="{{$haslo->slug}}">
                 <div class="row mt-3 fs-6">
                     <div class="col-12">
                         <div class="input-group">

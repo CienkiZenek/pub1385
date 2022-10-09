@@ -33,7 +33,7 @@ else {
 
 
 var komunikat  = document.getElementById("komunikatKopiowanie");
-    document.getElementById("komunikatKopiowanie").style.display = "block";
+    document.getElementById("komunikatKopiowanie").style.display = "none";
 var twKontener  = document.getElementById("twKontener");
     document.getElementById("twKontener").style.display = "none";
 //var twiterZaznaczone = document.getElementById("tw_zazn");
@@ -47,19 +47,9 @@ function kopiujCalaTresc() {
     komunikat.style.display = "block";
     // var komunikat  = document.getElementById("kopiowanie_komunikat");
     let range = new Range();
-
-    //range.setStart(tresc.firstChild, 0);
-    //range.setEnd(tresc.firstChild, tresc.firstChild.length);
     range.selectNodeContents(tresc);
-
-    /* działa tylko w firexie*/
-    /*let rangeLink = new Range();
-    rangeLink.setStart(dodaj.firstChild, 0);
-    rangeLink.setEnd(dodaj.firstChild, dodaj.firstChild.length);*/
     document.getSelection().removeAllRanges();
-
     document.getSelection().addRange(range);
-    //document.getSelection().addRange(rangeLink);
 
     try {
         var ok = document.execCommand('copy');

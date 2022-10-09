@@ -38,7 +38,7 @@
 
 
 
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <nav class="tlo-nav" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb fs-6 mb-4">
             <li class="breadcrumb-item"><a href="#">{{$zagadnienie -> dzialy->dzial}}</a></li>
             <li class="breadcrumb-item"><a href="#">{{$zagadnienie ->kategorie->kategoria}}</a></li>
@@ -51,26 +51,26 @@
     {{ $zagadnienie->zagadnienie}} (Wersja zozszerzona)
 </div>
 </div>
-    <div  class="row " style="min-height: 40px">
-        <div id="twKontener" class="col-lg-3 col-md-4 col-sm-5 alert-primary border border-primary fw-bolder">Opublikuj zaznaczony tekst: </div>
-        <div id="twZaznacz" class="col-lg-3 col-md-4 col-sm-5 "></div>
-    </div>
+    @include('komponenty.opublikujZaznaczone')
         <div class="mb-2 col-md-8 col-sm-12" >
-           <div id="tresc" class="fs-6 " style="text-indent: 1em">
+           <div id="tresc" class="fs-6" style="text-indent: 1em">
 
                @if(Str::length($zagadnienie->w_skrocie)>5)
-                   <p class="fw-bold">W skrócie:</p>
+                   <p class=" tlo-nav">W skrócie:</p>
                    <p class="akapit fw-bold">
-                       {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->w_skrocie)!!}
+                       {!! Str::replace("\n","</p><p class='akapit fw-bold'>",$zagadnienie->w_skrocie)!!}
                    </p>
                @endif
 
+                   @if(Str::length($zagadnienie->w_skrocie)>5)
+                       <p class=" tlo-nav">Więcej:</p>
+                   @endif
                <p class="akapit">
                    {!! Str::replace("\n","</p><p class='akapit'>",$zagadnienie->rozszerz)!!}
 
                </p>
-               {{--{!! $zagadnienie->rozszerz!!}--}}
-               {{--<span style="color: white; font-size: 1px"> ({{Request::url()}})</span>--}}
+
+
                <div id="dodaj" style="color: white; font-size: 1px"> ({{Request::url()}})</div>
 
            </div>

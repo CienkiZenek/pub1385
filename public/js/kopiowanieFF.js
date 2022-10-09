@@ -9,7 +9,7 @@ if(navigator.userAgent.match(/firefox|fxios/i)){
 // console.log("Tag usunięty!");
 // Kopiowanie całości lub fragmentów zagadnień/haseł
     var komunikat  = document.getElementById("komunikatKopiowanie");
-    document.getElementById("komunikatKopiowanie").style.display = "block";
+    document.getElementById("komunikatKopiowanie").style.display = "none";
     var twKontener  = document.getElementById("twKontener");
     document.getElementById("twKontener").style.display = "none";
 function kopiujCalaTresc() {
