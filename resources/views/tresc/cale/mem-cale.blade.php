@@ -54,6 +54,10 @@
     >
         Tweet
     </a>
+    <div class="me-2 ms-2">
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
+        <script type="IN/Share" data-url="{{Request::url()}}"></script>
+    </div>
     {{-- Facebook share button--}}
     <div class="fb-share-button ms-2"
          data-href="{{Request::url()}}"
@@ -76,11 +80,11 @@
 
 
 <div id="komunikatKopiowanie"></div>
-    <span class="badge bg-primary" onClick="ustawienieSciezki('{{$mem->Urlmem}}')" id="kopiujObrazek" >Kopiuj obrazek do schowka</span>
+<!--    <span class="badge bg-primary" onClick="ustawienieSciezki('{{$mem->Urlmem}}')" id="kopiujObrazek" >Kopiuj obrazek do schowka</span>-->
 {{--<p>Can write ? <span id="can-write"></span></p>--}}
 {{--<button id="copy-img-btn">Copy image to clipboard</button>--}}
 
 </div>
     </div>
-    <script src="{{ URL::asset('/js/obrazekKopiowanie.js')}}"></script>
+<!--    <script src="{{ URL::asset('/js/obrazekKopiowanie.js')}}"></script>-->
 @endsection

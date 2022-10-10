@@ -101,6 +101,6 @@ class RegisterController extends Controller
     }
     protected function registered(Request $request, $user)
     {
-        session()->flash('komunikat', "Zostałeś zrejestrowany!");
+        session()->flash('komunikat', "Zostałeś zrejestrowany! Na podany adres została wysłana wiadomość z prośbą o potwierdzenie adresu email. Należy postępować zgodnie z zwartymi tam wskazówkami");
     }
 }

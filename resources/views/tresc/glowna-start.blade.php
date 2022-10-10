@@ -253,7 +253,7 @@
 
         </div>
         <div class="col-lg-6 col-sm-12 mb-3">
-            {!!   config('pomocnik.zrzutka1') !!}
+            {!!   config('pomocnik.zrzutka2') !!}
 
         </div>
 

@@ -4,8 +4,9 @@
  * */
 return [
 
-    'wersja' => env('APP_VERSION', '0.22 Wczesny dostęp '),
+    'wersja' => env('APP_VERSION', '0.221 Wczesny dostęp '),
     'zrzutka1' => env('wsparcie1', '<div style="position: relative;height:353.067px;overflow: hidden;"><iframe style="position: absolute;top:0;left: 0;width: 100%;height: 100%;" width="400" height="353.067" src="https://zrzutka.pl/uksu9t/widget/13" frameborder="0" scrolling="no"></iframe></div>'),
+    'zrzutka2' => env('wsparcie2', '<div style="position: relative;height:353.067px;overflow: hidden;"><iframe style="position: absolute;top:0;left: 0;width: 100%;height: 100%;" width="400" height="353.067" src="https://zrzutka.pl/6gbkgh/widget/13" frameborder="0" scrolling="no"></iframe></div>'),
 
 
     ];

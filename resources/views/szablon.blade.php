@@ -231,7 +231,7 @@
 
         <div class="container">
             <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 napis-kolor">
+                <div class="col-lg-4 col-md-6 col-sm-12 napis-kolor">
                     <h4 class="h4-stopka">PoradnikDyskutant.pl</h4>
 
                     <div class="mt-3">@php
@@ -264,14 +264,15 @@
                     </div>
 
                 </div>
-                <div class="col-lg-2 col-6 footer-links">
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-links">
                     <h4 class="h4-stopka ">Kontakt</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="{{route('kontakt')}}">Formularz kontaktowy</a></li>
-
+                        <li><i class="bi bi-chevron-right"></i>E-mail: poczta@poradnikdyskutanta.pl</li>
+<!-- -->
                     </ul>
                 </div>
-                <div class="col-lg-2 col-6 footer-links">
+                <div class="col-lg-2 col-md-6 col-sm-12 footer-links">
                     <h4 class="h4-stopka ">Organizacyjne</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="{{route('regulamin')}}">Regulamin</a></li>
@@ -283,7 +284,7 @@
                         @endauth
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-12 footer-links">
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-links">
                     <h4 class="h4-stopka">Linki</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="https://slownik1894.poradnikdyskutanta.pl/"   target="_blank">Słownik Apologetyczny 1894</a></li>

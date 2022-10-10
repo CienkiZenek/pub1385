@@ -86,6 +86,10 @@
                 >
                     Tweet
                 </a>
+                <div class="me-2 ms-2">
+                    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
+                    <script type="IN/Share" data-url="{{Request::url()}}"></script>
+                </div>
             {{-- Facebook share button--}}
             <div class="fb-share-button ms-2"
                  data-href="{{Request::url()}}"
@@ -99,8 +103,7 @@
                  data-size="large" data-share="false"></div>
 
 
-                <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
-                <script type="IN/Share" data-url="{{Request::url()}}"></script>
+
 
 
             </div>
