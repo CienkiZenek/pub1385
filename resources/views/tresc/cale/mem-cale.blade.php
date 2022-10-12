@@ -5,7 +5,7 @@
     {{-- dane Open Graph dla facebooka--}}
 @section('og_url', Request::url())
 @section('og_type', 'image')
-@section('og_title', 'Poradnik dyskutant - '.$mem->tytul)
+@section('og_title', 'Poradnik dyskutanta - '.$mem->tytul)
 @section('og_description', $mem->podpis)
     @section('og_image', $mem->Urlmem)
 

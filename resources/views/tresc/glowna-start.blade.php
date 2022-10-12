@@ -21,17 +21,11 @@
 
                         </p>
                     @endforeach
-{{-- <a href="{{ route('hasloCale', $haslo->id) }}" class="link-dark">{{ $haslo->haslo }}
-                        </a>--}}
 
                 </div>
 
             </div>
-
-
-
             @endif
-
 
         </div>
         <div class="col-md-6">
@@ -46,30 +40,7 @@
                     @endforeach
                 </div>
             </div>
-           {{-- @if(isset($znalezione) && $znalezione->count()>0)
-            <div class="card " >
-                <div class="card-header">
-                    <a href="{{route('znalezione')}}" class="link-secondary">Znalezione w sieci</a>
-                </div>
 
-                <div class="card-body">
-                    @php $dodal='<b>Dodał: </b>';
-                    @endphp
-                    @foreach($znalezione as $znal)
-                        <p class="" data-bs-toggle="tooltip" data-bs-html="true"
-                           title="{{$znal->rodzaj}}. Dodał:  {{$znal->dodal_user_nazwa}}. {{$znal->komentarz}}"
-
-
-                        ><a href="{{$znal->link}}" class="link-dark text-decoration-none" target="_blank"
-
-                            >{{ Str::limit($znal->nazwa, 30) }}</a>
-                            </p>
-                    @endforeach
-
-
-                </div>
-            </div>
-            @endif--}}
 
             </div>
 
@@ -99,7 +70,6 @@
                         </p>
                     @endforeach
 
-
                 </div>
             </div>
 
@@ -116,12 +86,9 @@
                         </p>
                     @endforeach
 
-
                 </div>
             </div>
-
         </div>
-
     </div>
         @endif
     @endauth
@@ -141,7 +108,6 @@
                     @foreach($znalezione as $znal)
                         <p class="" data-bs-toggle="tooltip" data-bs-html="true"
                            title="{{$znal->rodzaj}}. Dodał:  {{$znal->dodal_user_nazwa}}. {{$znal->komentarz}}"
-
 
                         ><a href="{{$znal->link}}" class="link-dark text-decoration-none napis-kolor fs-6" target="_blank"
 
@@ -168,7 +134,6 @@
 
                             <div class=" mt-3">
 
-
                                 {{$komunikat->tytul.' ('.$komunikat->created_at->format('d-m-Y').')'}}
                             </div>
                             <div class=" mt-3">
@@ -177,25 +142,17 @@
                                     <a href="{{ route('komunikatCale', $komunikat->id) }}" class="link-dark"><i class="bi bi-arrow-right"></i></a>
                                 @endif
 
-
                             </div>
 
                         @endforeach
-
-
                     </div>
                 </div>
-
-
-
 
             @endif
 
         </div>
 
-
         </div>
-
     {{--  propozycje tematów -> tylko dla zweryfikowanych userów--}}
     @auth
         @if(Auth::user()->hasVerifiedEmail())
@@ -218,7 +175,6 @@
                 </div>
             </div>
 
-
         @endif
     @endauth
 
@@ -236,13 +192,9 @@
                     </span>
                 @endforeach
 
-
             </div>
         </div>
-
     </div>
-
-
 </div>
 @endif
 

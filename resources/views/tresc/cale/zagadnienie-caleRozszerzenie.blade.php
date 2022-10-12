@@ -10,9 +10,9 @@
 {{--@section('og_description', 'Opis  '.$zagadnienie->zajawka)--}}
 
 @if(Str::length($zagadnienie->zajawka)>10)
-    @section('og_description', Str::limit($haslo -> tresc, 45))
+    @section('og_description', Str::limit($haslo -> tresc, 150))
 @else()
-    @section('og_description', 'Poradnik Dyskutanta - pomaga w znalezieniu argumantów podczas interentowej dyskusji')
+    @section('og_description', 'Poradnik Dyskutanta - pomaga w znalezieniu argumentów podczas interentowej dyskusji')
 @endif()
 
 @if(Str::length($zagadnienie->obrazek1)>5)
@@ -125,7 +125,7 @@
             @if(Str::length($zagadnienie->linkSlownikPdf)>2)
                 <div class="mt-3 fs-6">
                     <i class="bi bi-filetype-pdf" style="font-size: x-large; color:dodgerblue;"></i>
-                    <a href="http://slownik1894.test/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
+                    <a href="https://slownik1894.poradnikdyskutanta.pl/slownik_pdf/{{$zagadnienie ->linkSlownikPdf}}" target="_blank">Hasło w słowniku 1894</a></div>
             @endif
             @if($zagadnienie->bibliografia->count()>0)
             <div class="mt-3 fs-6">Bibliografia</div>

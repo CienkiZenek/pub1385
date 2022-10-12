@@ -158,16 +158,19 @@ class UserDzialaniaController extends Controller
 
         /* Pobieranie uwag do zagadnień i do propozycji osobno*/
 
-        $doZagadnien=Zagadnienia_uwagi::Where('dodal_user', \auth()->user()->id)->get();
+        $doZagadnien=Zagadnienia_uwagi::Where('dodal_user', \auth()->user()->id)->Where('do','zagadnienie')->get();
+        $doHasel=Zagadnienia_uwagi::Where('dodal_user', \auth()->user()->id)->Where('do','haslo')->get();
         $doPropozycji=Propozycje_uwagi::Where('dodal_user', \auth()->user()->id)->get();
         /*Łączenie obu kolekcji*/
-        $mojeUwagi=$doZagadnien->concat($doPropozycji);
+        $mojeUwagi=$doZagadnien->concat($doHasel)->concat($doPropozycji);
+
         $mojeUwagi = $mojeUwagi->sortByDesc('created_at');
 
 
 
         return view('tresc.userzyAktywnosc.uwagi-moje-lista',
             ['doZagadnien'=>$doZagadnien,
+                'doHasel'=>$doHasel,
                 'doPropozycji'=>$doPropozycji,
                 'Wyniki'=>$mojeUwagi]);
 
@@ -246,7 +249,7 @@ $tytulPropozycji=$propozycjaTematu->tytul;
 
         $uwaga = Propozycje_uwagi::findOrFail($id);
 
-       // return view('tresc.userzyAktywnosc.uwagaPodglad', ['uwaga'=>$uwaga]);
+        return view('tresc.userzyAktywnosc.uwagaPodglad', ['uwaga'=>$uwaga]);
         return $uwaga;
 
     }

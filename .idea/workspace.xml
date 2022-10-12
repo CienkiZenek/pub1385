@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ca80ec6-f1d9-41cf-838d-39be79ee9d0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/poradnikObrazek.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
@@ -762,21 +763,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/_StronyWWW/pomocnik/public/js&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/_StronyWWW/pomocnik/public/img",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\_StronyWWW\pomocnik\public\img" />
+      <recent name="C:\_StronyWWW\pomocnik\app" />
       <recent name="C:\_StronyWWW\pomocnik\public\js" />
       <recent name="C:\_StronyWWW\pomocnik\resources\views\user" />
       <recent name="C:\_StronyWWW\pomocnik\resources\views\tresc\podstrony" />
-      <recent name="D:\_StronyWWW\pomocnik\config" />
-      <recent name="D:\Projekty\pomocnik\resources\views\tresc\podstrony" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\_StronyWWW\pomocnik\app\Http\Controllers\Mail" />
@@ -952,6 +953,8 @@
       <workItem from="1665308260881" duration="5183000" />
       <workItem from="1665329908425" duration="6000000" />
       <workItem from="1665425765445" duration="4259000" />
+      <workItem from="1665515119196" duration="3766000" />
+      <workItem from="1665594444890" duration="2914000" />
     </task>
     <servers />
   </component>

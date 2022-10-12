@@ -9,9 +9,18 @@
     </nav>
     <div class="row">
 
-        <div class="col-8">
+        <div class="col-12">
 
-<div class="fw-bold">{{$tag->nazwa}}</div>
+            <div class="row mt-4 mb-5 border-bottom">
+
+                <div class="col-lg-8 col-md-12 fs-5 ">
+                    <h4 class="pb-3 ">{{$tag->nazwa}}</h4>
+                </div>
+            </div>
+
+
+
+
 
             @if($tag->hasla->count()>0)
 

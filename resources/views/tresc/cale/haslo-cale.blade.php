@@ -7,9 +7,9 @@
 @section('og_type', 'article')
 @section('og_title', 'Poradnik dyskutant - '.$haslo -> haslo)
 @if(Str::length($haslo -> tresc)>10)
-@section('og_description', Str::limit($haslo -> tresc, 45))
+@section('og_description', Str::limit($haslo -> tresc, 120))
 @else()
-    @section('og_description', 'Poradnik Dyskutanta - pomaga w znalezieniu argumantów podczas interentowej dyskusji')
+    @section('og_description', 'Poradnik Dyskutanta - pomaga w znalezieniu argumentów podczas interentowej dyskusji')
     @endif()
 
 {{-- facebook SDK --}}

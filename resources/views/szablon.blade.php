@@ -23,7 +23,7 @@
     <meta property="og:url"           content="@yield('og_url', 'https://poradnikdyskutanta.pl')" />
     <meta property="og:type"           content="@yield('og_type', 'website')" />
     <meta property="og:title"         content="@yield('og_title', 'Poradnik Dyskutanta')" />
-    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumantów podczas internetowej dyskusji')" />
+    <meta property="og:description"   content="@yield('og_description', 'Pomaga w znalezieniu argumentów podczas internetowej dyskusji')" />
     <meta property="og:image"         content="@yield('og_image', 'https://poradnikdyskutanta.pl/img/poradnikObrazek.jpg')" />
 
     {{--<meta property="og:image:width"        content="" />
@@ -196,14 +196,12 @@
     <div class="mb-5"></div>
     @yield('tresc')
 
-
-
     <div>
         {{--reklama googla--}}
-       {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561469657068826"
-                crossorigin="anonymous"></script>--}}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3561469657068826"
+                crossorigin="anonymous"></script>
         <!-- DomyslnaPoradnik -->
-        {{--<ins class="adsbygoogle"
+        <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-3561469657068826"
              data-ad-slot="1539392620"
@@ -211,7 +209,7 @@
              data-full-width-responsive="true"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>--}}
+        </script>
         {{--koniec reklamy googla--}}
     </div>
     <div class="mt-5 mb-5"></div>
@@ -248,13 +246,6 @@
 
                         </i> (1P 3,15)</div>
 
-                    {{--
-                    <div class="container">
-    <a href="https://www.facebook.com/PoradnikDyskutanta-109691331664728" target="_blank"><i class="bi bi-facebook fs-4 me-2"></i></a>
-    <a href="https://twitter.com/PoradnikDyskut" target="_blank"><i class="bi bi-twitter fs-4 me-2"></i></a>
-    <a href="https://www.linkedin.com/in/poradnik-dyskutanta-528833235/" target="_blank"><i class="bi bi-linkedin fs-4"></i></a>
-</div>
-                    --}}
 
                     <div class="social-links mt-3">
                         <a href="https://twitter.com/PoradnikDyskut" target="_blank"><i class="bi bi-twitter"></i></a>
@@ -268,7 +259,8 @@
                     <h4 class="h4-stopka ">Kontakt</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="{{route('kontakt')}}">Formularz kontaktowy</a></li>
-                        <li><i class="bi bi-chevron-right"></i>E-mail: poczta@poradnikdyskutanta.pl</li>
+                        <li><i class="bi bi-chevron-right"></i>E-mail: </li>
+                        <li><i class="bi bi-chevron-right"></i>poczta@poradnikdyskutanta.pl</li>
 <!-- -->
                     </ul>
                 </div>
@@ -288,38 +280,14 @@
                     <h4 class="h4-stopka">Linki</h4>
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="https://slownik1894.poradnikdyskutanta.pl/"   target="_blank">Słownik Apologetyczny 1894</a></li>
-
                     </ul>
-
-                </div>
-
-
-
+                </div
             </div>
         </div>
-
-
-
-
     </div>
     <div class="stopka-copy text-center napis-kolor"> &copy; PoradnikDyskutanta 2022</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
 </footer>
-
-
-
 @auth
     <form method="POST" id="wylogowanie_form" action="{{ route('wylogowanie') }}" >
         @csrf
