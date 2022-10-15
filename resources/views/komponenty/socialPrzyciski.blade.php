@@ -1,4 +1,4 @@
-<div class="d-flex p-1 align-baseline">
+<div class="d-flex p-1 align-baseline ">
 
     <div class="ms-2">
         {{-- Twitter share button--}}
@@ -26,8 +26,10 @@
     {{-- Facebook like button--}}
     <div class="fb-like ms-2" data-href="{{Request::url()}}"
          data-width="" data-layout="standard" data-action="like"
-         data-size="large" data-share="false"></div>
+         data-size="large" data-share="false">
 
-
+    </div>
 
 </div>
+
+

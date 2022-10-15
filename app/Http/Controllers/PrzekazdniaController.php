@@ -16,7 +16,7 @@ class PrzekazdniaController extends Controller
 
     public function index(){
 
-        $przekazy=Przekazdnia::where('status', 'Opublikowany')->orderBy('created_at', 'asc')->paginate(10);
+        $przekazy=Przekazdnia::where('status', 'Opublikowany')->orderBy('created_at', 'desc')->paginate(10);
         return view('tresc.podstrony.przekazdnia', ['Wyniki'=>$przekazy]);
     }
     public function przekazCale($id){

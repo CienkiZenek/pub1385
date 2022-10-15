@@ -43,7 +43,7 @@ class _GlownyController extends Controller
 
         //$zagadnienia=Zagadnienia::orderBy('zagadnienie', 'asc')->take(10)->get();
         $propozycje=Propozycje::orderBy('created_at', 'asc')->take(10)->get();
-        $przekazdnia=Przekazdnia::where('status', 'Opublikowany')->orderBy('created_at', 'asc')->take(10)->get();
+        $przekazdnia=Przekazdnia::where('status', 'Opublikowany')->orderBy('created_at', 'desc')->take(10)->get();
         $znalezione=Znalezione::orderBy('created_at', 'asc')->take(10)->get();
         /*$tagi=Tagi::orderBy('nazwa', 'asc')->take(30)->get();*/
 

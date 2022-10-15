@@ -64,7 +64,8 @@
      duchy złe, które na zgubę dusz ludzkich po tym
       świecie krążą, mocą Bożą strąć do piekła. Amen.
 --}}
-{{--@include('cookieConsent::index')--}}
+@include('cookie-consent::index')
+
 <h1 style="font-size: 1px; margin: 0px; padding: 0; color: #0d6efd96; height: 1px">Poradnik dyskutant</h1>
 <nav class="navbar navbar-expand-lg navbar-light tlo-nav" >
     <div class="container-fluid">
@@ -123,34 +124,7 @@
 </nav>
 
 
-<div class="container-fluid d-flex align-items-center justify-content-end mt-2 mb-2">
-
-    {{-- Wyświetlanie social na strone głownej--}}
-    @if(isset($strona_glowna))
-
-        {{-- facebook SDK --}}
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.0";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-
-        <script async defer crossorigin="anonymous"
-                src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v11.0"
-                nonce="djYMT9ht"></script>
-        {{-- Koniec facebook SDK --}}
-        {{-- Twitter js --}}
-        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
-
-        <!-- social butony-->
-        @include('komponenty.socialPrzyciski')
-
-
-
-        @endif
+<div class="container-fluid d-flex align-items-center justify-content-end mt-2 mb-2 ">
 
 
     {{-- w zależności od zalgowania pojawiją się odpowiednie przyciski--}}
@@ -172,6 +146,36 @@
     @endauth
 
 </div>
+
+<div class="container-fluid  mt-2 mb-2">
+    {{-- Wyświetlanie social na strone głownej--}}
+    @if(isset($strona_glowna))
+
+        {{-- facebook SDK --}}
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v11.0"
+                nonce="djYMT9ht"></script>
+        {{-- Koniec facebook SDK --}}
+        {{-- Twitter js --}}
+        <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+
+        <!-- social butony-->
+        @include('komponenty.socialPrzyciski')
+    @endif
+
+</div>
+
+
 
 <div class="container mt-2 mb-2">
 
@@ -281,7 +285,7 @@
                     <ul>
                         <li><i class="bi bi-chevron-right"></i> <a href="https://slownik1894.poradnikdyskutanta.pl/"   target="_blank">Słownik Apologetyczny 1894</a></li>
                     </ul>
-                </div
+                </div>
             </div>
         </div>
     </div>

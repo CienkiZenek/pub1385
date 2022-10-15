@@ -67,6 +67,13 @@
             </div>
         </div>
 </div>
+    <div class="row mt-1">
+
+
+        <div class="col-12">{{$przekaz->dodal_user_nazwa}}</div>
+
+
+    </div>
     <div class="d-flex mt-4 mb-4">
         {{-- Twitter share button--}}
         <a class="twitter-share-button"
@@ -78,6 +85,10 @@
         >
             Tweet
         </a>
+        <div class="ms-2">
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
+        <script type="IN/Share" data-url="{{Request::url()}}"></script></div>
+
         {{-- Facebook share button--}}
         <div class="fb-share-button ms-2"
              data-href="{{Request::url()}}"
@@ -90,8 +101,7 @@
              data-width="" data-layout="standard" data-action="like"
              data-size="large" data-share="false"></div>
 
-        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: pl_PL</script>
-        <script type="IN/Share" data-url="{{Request::url()}}"></script>
+
 
     </div>
 
@@ -119,19 +129,15 @@
 
     </div>
     </div>
+    @if(Str::length($przekaz->link)>5)
     <div class="row mt-3">
 
-
-        <div class="col-12">{{$przekaz->dodal_user_nazwa}}</div>
+        <div class="col-12"><i class="bi bi-link-45deg fs-4" ></i><a href="{{$przekaz->link}}" target="_blank" class="link-primary">{{$przekaz->link_tresc}}</a></div>
 
 
     </div>
-    <div class="row mt-3">
+    @endif
 
-        <div class="col-12"><a href="{{$przekaz->link}}" target="_blank" class="link-primary">{{$przekaz->link_tresc}}</a></div>
-
-
-    </div>
     <script src="{{ URL::asset('/js/kopiowanie.js')}}"></script>
     <script src="{{ URL::asset('/js/kopiowanieFF.js')}}"></script>
 

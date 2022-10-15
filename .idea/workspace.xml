@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ca80ec6-f1d9-41cf-838d-39be79ee9d0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/poradnikObrazek.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
@@ -199,6 +198,7 @@
       <change beforePath="$PROJECT_DIR$/public/img/ion-svg/return-right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/ion-svg/return-right.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/ion-svg/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/ion-svg/search.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/img/logoPoradnik.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logoPoradnik.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/poradnikObrazek.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/poradnikObrazek.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/bootstrap-js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/bootstrap-js/bootstrap.bundle.js" afterDir="false" />
@@ -240,30 +240,30 @@
       <change beforePath="$PROJECT_DIR$/resources/lang/pl/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pl/passwords.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/pl/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pl/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/pl/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/pl/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ar/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ar/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/bg/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/bg/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/cs/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/cs/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/da/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/da/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/de/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/de/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/el/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/el/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/eo/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/eo/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/es/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/es/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/et/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/et/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/fr/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/fr/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/hu/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/hu/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/id/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/id/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/it/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/it/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/kr/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/kr/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nb/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nb/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nl/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nl/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pl/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pl/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pt/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pt/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ro/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ro/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ru/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ru/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sk/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sk/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sv/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sv/texts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/tr/texts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/tr/texts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ar/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/bg/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/cs/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/da/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/de/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/el/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/en/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/eo/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/es/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/et/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/fr/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/hu/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/id/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/it/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/kr/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nb/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/nl/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pl/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/pt/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ro/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/ru/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sk/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/sv/texts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/vendor/cookieConsent/tr/texts.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/__login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/__login.blade.php" afterDir="false" />
@@ -364,8 +364,8 @@
       <change beforePath="$PROJECT_DIR$/resources/views/user/ustawieniaForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/ustawieniaForm.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/ustawieniaForm_kopia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/ustawieniaForm_kopia.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/ustawienia_kopia.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/ustawienia_kopia.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/cookieConsent/dialogContents.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/cookieConsent/dialogContents.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/cookieConsent/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/cookieConsent/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/cookieConsent/dialogContents.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/cookieConsent/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vendor/livewire/bootstrap.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/livewire/bootstrap.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vendor/livewire/simple-bootstrap.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/livewire/simple-bootstrap.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/vendor/livewire/simple-tailwind.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/livewire/simple-tailwind.blade.php" afterDir="false" />
@@ -698,6 +698,8 @@
       <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-cookie-consent" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-package-tools" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -763,14 +765,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/_StronyWWW/pomocnik/public/img",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/_StronyWWW/pomocnik/public/img&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\_StronyWWW\pomocnik\public\img" />
@@ -955,6 +957,8 @@
       <workItem from="1665425765445" duration="4259000" />
       <workItem from="1665515119196" duration="3766000" />
       <workItem from="1665594444890" duration="2914000" />
+      <workItem from="1665682767521" duration="4790000" />
+      <workItem from="1665853995063" duration="4866000" />
     </task>
     <servers />
   </component>

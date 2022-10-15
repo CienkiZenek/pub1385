@@ -22,7 +22,7 @@
                 <img src="{{$karuzela->Urlobrazek1}}" class="d-block w-100" alt="..." style="object-fit: scale-down;">
                 {{--<img src="{{$karuzela->Urlobrazek1}}" class="d-block w-100" alt="...">--}}
 
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption ">
                     <a href="{{route('zagadnienieCale',$karuzela->slug )}}" class="text-white text-decoration-none">
                         {{--<h5 class="tlo-karuzela p-1 rounded-3">{{$karuzela->zajawka_tytul}}</h5>--}}
                     <p class="tlo-karuzela p-1  rounded-3">{{Str::limit($karuzela->zajawka, 240)}}</p></a>

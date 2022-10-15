@@ -51,7 +51,7 @@
     <div class="row mt-3">
 
         <div class="col-md-6">
-
+            @if($miejsca->count()>0)
             <div class="card obwodkaKarty" >
                 <div class="card-header tlo-nav obwodkaKartyBottom">
                     <a href="{{route('miejsca')}}" class="link-secondary text-decoration-none napis-kolor fs-5"><i class="bi bi-chat-right-text me-2"></i>Miejsca dyskusji</a>
@@ -72,11 +72,12 @@
 
                 </div>
             </div>
-
+            @endif
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6"> @if($infa->count()>0)
             <div class="card obwodkaKarty" >
+
                 <div class="card-header tlo-nav obwodkaKartyBottom">
                     <a href="{{route('info')}}" class="link-secondary text-decoration-none napis-kolor fs-5"><i class="bi bi-info-square me-2"></i>Informacje</a>
                 </div>
@@ -87,7 +88,9 @@
                     @endforeach
 
                 </div>
+
             </div>
+            @endif
         </div>
     </div>
         @endif
@@ -131,18 +134,18 @@
                     <div class="card-body">
                         @foreach($komunikaty as $komunikat)
 
-
-                            <div class=" mt-3">
+                            <a href="{{ route('komunikatCale', $komunikat->id) }}" class="link-dark text-decoration-none">
+                            <div class="mt-3 fw-bolder">
 
                                 {{$komunikat->tytul.' ('.$komunikat->created_at->format('d-m-Y').')'}}
                             </div>
-                            <div class=" mt-3">
+                            <div class=" mt-3 border-bottom">
                                 {{$komunikat->naglowek}}
                                 @if(Str::length($komunikat->tresc)>5)
-                                    <a href="{{ route('komunikatCale', $komunikat->id) }}" class="link-dark"><i class="bi bi-arrow-right"></i></a>
+                                    <i class="bi bi-arrow-right"></i>
                                 @endif
 
-                            </div>
+                            </div></a>
 
                         @endforeach
                     </div>
@@ -160,6 +163,7 @@
             <div class="row mt-3 mb-3 ">
                 <div class="col-8 offset-2">
 
+                    @if($propozycje->count()>0)
                             <div class="card obwodkaKarty " >
                                 <div class="card-header text-center tlo-nav obwodkaKartyBottom">
                                     <a href="{{route('propozycje')}}" class="link-secondary text-decoration-none napis-kolor fs-5" style="color: #012970;"><i class="bi  bi-folder-plus me-2"></i> Zaproponowane tematy</a>
@@ -171,6 +175,7 @@
                                     @endforeach
                                 </div>
                             </div>
+                    @endif
 
                 </div>
             </div>
